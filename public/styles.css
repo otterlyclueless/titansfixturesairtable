@@ -1509,18 +1509,18 @@ h1 {
 
   .heroTeams,
   .fixtureTeams {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     gap: 0.55rem;
   }
 
   .heroTeam:last-child,
   .fixtureTeams .team:last-child {
-    text-align: left;
+    text-align: right;
   }
 
   .heroVs,
   .score {
-    justify-self: start;
+    justify-self: center;
     min-width: 3.1rem;
   }
 
@@ -1530,18 +1530,25 @@ h1 {
 
   .modalDialog {
     width: min(100%, 34rem);
+    max-height: calc(100dvh - 1rem);
   }
 
   .modalTeams {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "home"
+      "centre"
+      "away";
+    gap: 0.35rem;
+    padding-bottom: 0.35rem;
   }
 
-  .modalTeam:last-child {
-    text-align: center;
+  .modalTeams .modalTeam:first-child {
+    grid-area: home;
   }
 
-  .modalTeam:last-child .modalBadge {
-    order: initial;
+  .modalTeams .modalTeam:last-child {
+    grid-area: away;
   }
 
   .modalTeam:last-child .teamRole,
@@ -1551,14 +1558,19 @@ h1 {
 
   .modalScore {
     justify-self: center;
+    min-width: 4rem;
+    min-height: 2.9rem;
+    font-size: 1.05rem;
   }
 
   .modalCentre {
-    order: -1;
+    grid-area: centre;
+    order: 0;
+    gap: 0.32rem;
   }
 
   .modalPoster {
-    padding: 1rem;
+    padding: 1rem 0.85rem 0.9rem;
   }
 
   .modalTop {
@@ -1566,24 +1578,27 @@ h1 {
   }
 
   .modalTeam {
-    min-height: 5.8rem;
-    font-size: 1.35rem;
+    min-height: 5.1rem;
+    padding: 0.45rem 5.8rem;
+    font-size: 1rem;
+    line-height: 1.04;
   }
 
   .modalWatermark {
-    top: 64%;
-    width: 8.5rem;
-    height: 8.5rem;
+    width: 7rem;
+    height: 7rem;
     opacity: 0.13;
   }
 
   .modalWatermark--home {
-    left: 0.35rem;
+    top: 34%;
+    left: 1.2rem;
     transform: translateY(-50%);
   }
 
   .modalWatermark--away {
-    right: 0.35rem;
+    top: 67%;
+    right: 1.2rem;
     left: auto;
     transform: translateY(-50%);
   }
@@ -1594,9 +1609,21 @@ h1 {
 
   .modalMeta {
     grid-template-columns: minmax(0, 1fr);
-    margin: 0.2rem 0 0;
+    margin: 0.45rem auto 0;
     padding: 0;
     font-size: 0.78rem;
+  }
+
+  .modalMeta div {
+    width: min(100%, 14rem);
+  }
+
+  .modalDetails {
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  .modalDetails .detailRow p {
+    font-size: 0.84rem;
   }
 }
 
@@ -1632,6 +1659,49 @@ h1 {
 
   .team {
     font-size: 0.92rem;
+  }
+
+  .modalClose {
+    top: 0.65rem;
+    right: 0.65rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .modalPoster {
+    padding: 0.9rem 0.7rem 0.8rem;
+  }
+
+  .modalTeams {
+    gap: 0.28rem;
+  }
+
+  .modalTeam {
+    min-height: 4.65rem;
+    padding-left: 4.7rem;
+    padding-right: 4.7rem;
+    font-size: 0.88rem;
+  }
+
+  .modalScore {
+    min-width: 3.7rem;
+    min-height: 2.65rem;
+    font-size: 1rem;
+  }
+
+  .modalWatermark {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .modalWatermark--home {
+    top: 34%;
+    left: 0.75rem;
+  }
+
+  .modalWatermark--away {
+    top: 67%;
+    right: 0.75rem;
   }
 
   .listHeader {
