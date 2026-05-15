@@ -403,13 +403,12 @@ function renderSummary() {
   const upcomingFixtures = teamFixtures.filter((fixture) => getSmartStatus(fixture).key === "upcoming");
   const goalsFor = playedFixtures.reduce((total, fixture) => total + getTitansGoalsFor(fixture), 0);
   const nextFixture = getNextFixture(currentTeam);
-  const lastResult = playedFixtures.sort((a, b) => getFixtureTime(b) - getFixtureTime(a))[0];
 
   summaryGrid.innerHTML = `
     ${createSummaryCard("Fixtures", teamFixtures.length, getTeamLabel())}
+    ${createSummaryCard("Played", playedFixtures.length, "")}
     ${createSummaryCard("Upcoming", upcomingFixtures.length, nextFixture ? formatKickOff(nextFixture.kickOff, "short") : "No upcoming date")}
-    ${createSummaryCard("Played", playedFixtures.length, lastResult ? formatKickOff(lastResult.kickOff, "short") : "No results yet")}
-    ${createSummaryCard("Goals For", goalsFor, "Recorded scores")}
+    ${createSummaryCard("Goals", goalsFor, "Scored by Titans")}
   `;
 
   postEmbedHeight();
@@ -420,7 +419,7 @@ function createSummaryCard(label, value, detail, extraClass = "") {
     <article class="summaryCard ${extraClass}">
       <span>${escapeHtml(label)}</span>
       <strong>${escapeHtml(value)}</strong>
-      <p>${escapeHtml(detail)}</p>
+      ${detail ? `<p>${escapeHtml(detail)}</p>` : ""}
     </article>
   `;
 }
