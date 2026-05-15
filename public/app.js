@@ -92,9 +92,8 @@ function setupModal() {
 
 function setupEmbedResize() {
   const app = document.getElementById("app") || document.querySelector(".app");
-  const params = new URLSearchParams(window.location.search);
 
-  if (params.get("embed") === "1") {
+  if (isEmbedMode()) {
     document.body.classList.add("isEmbed");
   }
 
@@ -113,6 +112,11 @@ function postEmbedHeight() {
   const height = Math.ceil(app?.getBoundingClientRect().height || document.body.scrollHeight);
 
   window.parent.postMessage({ type: "titans-fixtures-resize", height }, "*");
+}
+
+function isEmbedMode() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("embed") === "1";
 }
 
 function setupTabs() {
