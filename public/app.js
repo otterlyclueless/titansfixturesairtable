@@ -1,5 +1,6 @@
 let allFixtures = [];
 let allEvents = [];
+let currentSection = "fixtures";
 let currentView = "upcoming";
 let currentTeam = "all";
 let currentSearch = "";
@@ -117,18 +118,16 @@ function isEmbedMode() {
 }
 
 function setupTabs() {
-  const tabs = document.querySelectorAll(".tab");
+  document.querySelectorAll(".primaryTabs .tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      currentSection = tab.dataset.section;
+      renderAll();
+    });
+  });
 
-  tabs.forEach((tab) => {
+  document.querySelectorAll(".fixtureViewTabs .tab").forEach((tab) => {
     tab.addEventListener("click", () => {
       currentView = tab.dataset.view;
-
-      document.querySelectorAll(".tab").forEach((button) => {
-        button.classList.remove("isActive");
-      });
-
-      tab.classList.add("isActive");
-
       renderAll();
     });
   });
@@ -224,7 +223,11 @@ function setupInitialState() {
 
   currentView = defaultView;
 
-  if (["upcoming", "results", "all", "events"].includes(view)) {
+  if (view === "events") {
+    currentSection = "events";
+  }
+
+  if (["upcoming", "results", "all"].includes(view)) {
     currentView = view;
   }
 
@@ -255,7 +258,11 @@ function setupInitialState() {
 }
 
 function syncControls() {
-  document.querySelectorAll(".tab").forEach((tab) => {
+  document.querySelectorAll(".primaryTabs .tab").forEach((tab) => {
+    tab.classList.toggle("isActive", tab.dataset.section === currentSection);
+  });
+
+  document.querySelectorAll(".fixtureViewTabs .tab").forEach((tab) => {
     tab.classList.toggle("isActive", tab.dataset.view === currentView);
   });
 
@@ -286,9 +293,10 @@ function syncControls() {
 }
 
 function refreshFilterUi() {
-  const isEventsView = currentView === "events";
+  const isEventsView = currentSection === "events";
   const teamFilters = document.querySelector(".teamFilters");
   const filterGrid = document.querySelector(".filterGrid");
+  const fixtureViewTabs = document.querySelector(".fixtureViewTabs");
   const searchLabel = document.getElementById("searchLabel");
   const searchInput = document.getElementById("fixtureSearch");
   const competitionLabel = document.getElementById("competitionLabel");
@@ -302,8 +310,17 @@ function refreshFilterUi() {
     return;
   }
 
-  teamFilters.hidden = isEventsView;
-  filterGrid.hidden = isEventsView;
+  if (teamFilters) {
+    teamFilters.hidden = isEventsView;
+  }
+
+  if (filterGrid) {
+    filterGrid.hidden = isEventsView;
+  }
+
+  if (fixtureViewTabs) {
+    fixtureViewTabs.hidden = isEventsView;
+  }
 
   if (isEventsView) {
     currentSearch = "";
@@ -340,8 +357,8 @@ function optionExists(select, value) {
 function renderAll() {
   refreshFilterUi();
   syncControls();
-  document.body.classList.toggle("isEventsView", currentView === "events");
-  appRoot?.classList.toggle("isEventsView", currentView === "events");
+  document.body.classList.toggle("isEventsView", currentSection === "events");
+  appRoot?.classList.toggle("isEventsView", currentSection === "events");
   renderSummary();
   renderHero();
   renderPrimaryList();
@@ -350,7 +367,7 @@ function renderAll() {
 function renderSummary() {
   const summaryGrid = document.getElementById("summaryGrid");
 
-  if (currentView === "events") {
+  if (currentSection === "events") {
     const visibleEvents = getVisibleEvents();
     const upcomingEvents = visibleEvents.filter((event) => getEventStatus(event) === "upcoming");
     const nextEvent = getNextEvent();
@@ -393,7 +410,7 @@ function createSummaryCard(label, value, detail, extraClass = "") {
 }
 
 function renderPrimaryList() {
-  if (currentView === "events") {
+  if (currentSection === "events") {
     renderEvents();
     return;
   }
@@ -453,7 +470,7 @@ function getFilteredFixtures() {
 function renderHero() {
   const hero = document.getElementById("hero");
 
-  if (currentView === "events") {
+  if (currentSection === "events") {
     const nextEvent = getNextEvent();
 
     hero.innerHTML = nextEvent ? `
@@ -1066,7 +1083,7 @@ function getEmptyStateMessage() {
     return "Fixture data is temporarily unavailable. Please try again shortly.";
   }
 
-  if (currentView === "events") {
+  if (currentSection === "events") {
     return "Check back soon for the next club event.";
   }
 
@@ -1411,7 +1428,7 @@ function isPanelEmbed() {
 
 function getDefaultView() {
   const bodyValue = String(document.body?.dataset.defaultView || "").toLowerCase();
-  return ["upcoming", "results", "all", "events"].includes(bodyValue) ? bodyValue : "upcoming";
+  return ["upcoming", "results", "all"].includes(bodyValue) ? bodyValue : "upcoming";
 }
 
 function escapeHtml(value) {

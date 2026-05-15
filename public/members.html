@@ -25,11 +25,15 @@
       </header>
 
       <section class="controls" aria-label="Fixture controls">
-        <nav class="tabs" aria-label="Fixture view">
+        <nav class="tabs primaryTabs" aria-label="Centre section">
+          <button class="tab isActive" data-section="fixtures">Fixtures</button>
+          <button class="tab" data-section="events">Events</button>
+        </nav>
+
+        <nav class="tabs fixtureViewTabs" aria-label="Fixture view">
           <button class="tab isActive" data-view="upcoming">Upcoming</button>
           <button class="tab" data-view="results">Results</button>
           <button class="tab" data-view="all">All</button>
-          <button class="tab" data-view="events">Events</button>
         </nav>
 
         <nav class="teamFilters" aria-label="Team filter">
