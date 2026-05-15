@@ -45,6 +45,8 @@ Use this for the members-facing version. It includes private events as well as p
   data-title="London Titans Member Events"
   data-view="events"
   data-audience="members"
+  data-layout="panel"
+  data-height="860px"
   data-min-height="100vh"
 ></script>
 ```

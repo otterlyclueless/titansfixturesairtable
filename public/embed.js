@@ -9,7 +9,7 @@
 
   const scriptUrl = new URL(currentScript.src);
   const widgetUrl = new URL(currentScript.dataset.src || "/", scriptUrl.origin);
-  const passthroughParams = ["view", "team", "competition", "season", "status", "search", "audience"];
+  const passthroughParams = ["view", "team", "competition", "season", "status", "search", "audience", "layout"];
 
   widgetUrl.searchParams.set("embed", "1");
 
@@ -28,13 +28,21 @@
   iframe.loading = "lazy";
   iframe.style.width = "100%";
   iframe.style.minHeight = currentScript.dataset.minHeight || "720px";
+  iframe.style.height = currentScript.dataset.height || currentScript.dataset.minHeight || "720px";
   iframe.style.border = "0";
   iframe.style.display = "block";
+  iframe.style.overflow = "auto";
 
   target.innerHTML = "";
   target.appendChild(iframe);
 
+  const useAutoResize = currentScript.dataset.layout !== "panel";
+
   window.addEventListener("message", (event) => {
+    if (!useAutoResize) {
+      return;
+    }
+
     if (event.origin !== widgetUrl.origin) {
       return;
     }

@@ -9,6 +9,7 @@ let currentStatus = "all";
 let lastFocusedElement = null;
 let expandedInlineCard = null;
 const currentAudience = getAudienceMode();
+const currentEmbedLayout = getEmbedLayout();
 const TITANS_TEAM_PREFIX = "Titans ";
 
 async function loadFixtures() {
@@ -86,6 +87,10 @@ function setupEmbedResize() {
 
   if (isEmbedMode()) {
     document.body.classList.add("isEmbed");
+
+    if (isPanelEmbed()) {
+      document.body.classList.add("isPanelEmbed");
+    }
   }
 
   if (!app || typeof ResizeObserver === "undefined") {
@@ -252,6 +257,7 @@ function syncControls() {
 function refreshFilterUi() {
   const isEventsView = currentView === "events";
   const teamFilters = document.querySelector(".teamFilters");
+  const filterGrid = document.querySelector(".filterGrid");
   const searchLabel = document.getElementById("searchLabel");
   const searchInput = document.getElementById("fixtureSearch");
   const competitionLabel = document.getElementById("competitionLabel");
@@ -262,12 +268,18 @@ function refreshFilterUi() {
   const statusFilter = document.getElementById("statusFilter");
 
   teamFilters.hidden = isEventsView;
+  filterGrid.hidden = isEventsView;
   seasonField.hidden = isEventsView;
   statusField.hidden = isEventsView;
 
   if (isEventsView) {
+    currentSearch = "";
+    currentCompetition = "all";
+    currentSeason = "all";
+    currentStatus = "all";
     searchLabel.textContent = "Search events";
     searchInput.placeholder = "Event, type, location, description";
+    searchInput.value = "";
     competitionLabel.textContent = "Event type";
     populateSelect("competitionFilter", getUniqueValuesFromEvents((event) => event.type), "All event types");
     seasonFilter.value = "all";
@@ -296,6 +308,8 @@ function optionExists(select, value) {
 function renderAll() {
   refreshFilterUi();
   syncControls();
+  document.body.classList.toggle("isEventsView", currentView === "events");
+  document.getElementById("app")?.classList.toggle("isEventsView", currentView === "events");
   renderSummary();
   renderHero();
   renderPrimaryList();
@@ -310,17 +324,19 @@ function renderSummary() {
     const nextEvent = getNextEvent();
     const privateEvents = visibleEvents.filter((event) => event.isPrivate);
 
+    summaryGrid.className = "summaryGrid summaryGrid--events";
     summaryGrid.innerHTML = `
-      ${createSummaryCard("Events", visibleEvents.length, isMembersMode() ? "Members view" : "Public view")}
-      ${createSummaryCard("Upcoming", upcomingEvents.length, nextEvent ? formatKickOff(nextEvent.date, "short") : "No upcoming date")}
-      ${createSummaryCard("Visible", visibleEvents.filter((event) => !event.isPrivate).length, "Public events")}
-      ${createSummaryCard("Private", isMembersMode() ? privateEvents.length : 0, isMembersMode() ? "Members only" : "Hidden publicly")}
+      ${createSummaryCard("Events", visibleEvents.length, isMembersMode() ? "Members view" : "Public view", "summaryCard--events")}
+      ${createSummaryCard("Upcoming", upcomingEvents.length, nextEvent ? formatKickOff(nextEvent.date, "short") : "No upcoming date", "summaryCard--upcoming")}
+      ${createSummaryCard("Visible", visibleEvents.filter((event) => !event.isPrivate).length, "Public events", "summaryCard--visible")}
+      ${createSummaryCard("Private", isMembersMode() ? privateEvents.length : 0, isMembersMode() ? "Members only" : "Hidden publicly", "summaryCard--private")}
     `;
 
     postEmbedHeight();
     return;
   }
 
+  summaryGrid.className = "summaryGrid";
   const teamFixtures = getTeamScopedFixtures();
   const playedFixtures = teamFixtures.filter((fixture) => getSmartStatus(fixture).key === "played");
   const upcomingFixtures = teamFixtures.filter((fixture) => getSmartStatus(fixture).key === "upcoming");
@@ -338,9 +354,9 @@ function renderSummary() {
   postEmbedHeight();
 }
 
-function createSummaryCard(label, value, detail) {
+function createSummaryCard(label, value, detail, extraClass = "") {
   return `
-    <article class="summaryCard">
+    <article class="summaryCard ${extraClass}">
       <span>${escapeHtml(label)}</span>
       <strong>${escapeHtml(value)}</strong>
       <p>${escapeHtml(detail)}</p>
@@ -452,6 +468,7 @@ function renderFixtures() {
   const fixtures = getFilteredFixtures();
 
   output.innerHTML = "";
+  output.classList.remove("eventGrid");
   listTitle.textContent = getListTitle();
   fixtureCount.textContent = `${fixtures.length} ${fixtures.length === 1 ? "match" : "matches"}`;
 
@@ -480,6 +497,7 @@ function renderEvents() {
   const events = getFilteredEvents();
 
   output.innerHTML = "";
+  output.classList.add("eventGrid");
   listTitle.textContent = isMembersMode() ? "Member Events" : "Events";
   fixtureCount.textContent = `${events.length} ${events.length === 1 ? "event" : "events"}`;
 
@@ -1344,6 +1362,15 @@ function getAudienceMode() {
 
 function isMembersMode() {
   return currentAudience === "members";
+}
+
+function getEmbedLayout() {
+  const params = new URLSearchParams(window.location.search);
+  return String(params.get("layout") || "").toLowerCase();
+}
+
+function isPanelEmbed() {
+  return currentEmbedLayout === "panel";
 }
 
 function escapeHtml(value) {
