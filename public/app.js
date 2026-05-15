@@ -47,29 +47,14 @@ function handleLoadError(status) {
 }
 
 async function fetchFixtures() {
-  const sources = [
-    "fixtures.json",
-    "/.netlify/functions/fixtures"
-  ];
+  const response = await fetch("fixtures.json");
+  const data = await response.json();
 
-  for (const source of sources) {
-    try {
-      const response = await fetch(source);
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || `Failed to load ${source}`);
-      }
-
-      return data;
-    } catch (error) {
-      if (source === sources[sources.length - 1]) {
-        throw error;
-      }
-    }
+  if (!response.ok) {
+    throw new Error(data.error || "Failed to load fixtures.json");
   }
 
-  return [];
+  return data;
 }
 
 function setupModal() {
