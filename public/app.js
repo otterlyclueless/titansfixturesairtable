@@ -371,10 +371,10 @@ function optionExists(select, value) {
 }
 
 function renderAll() {
-  refreshFilterUi();
-  syncControls();
   document.body.classList.toggle("isEventsView", currentSection === "events");
   appRoot?.classList.toggle("isEventsView", currentSection === "events");
+  refreshFilterUi();
+  syncControls();
   renderSummary();
   renderHero();
   renderPrimaryList();

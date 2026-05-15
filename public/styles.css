@@ -304,6 +304,13 @@ h1 {
   gap: 0.55rem;
 }
 
+.isEventsView .fixtureViewTabs,
+.isEventsView .teamFilters,
+.isEventsView .filterToggle,
+.isEventsView .filterGrid {
+  display: none !important;
+}
+
 .field {
   display: grid;
   gap: 0.25rem;
