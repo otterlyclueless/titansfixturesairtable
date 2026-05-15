@@ -36,15 +36,15 @@
           <button class="tab" data-view="all">All</button>
         </nav>
 
-        <button class="filterToggle" id="filterToggle" type="button" aria-expanded="false">
+        <button class="filterToggle" id="filterToggle" type="button" aria-expanded="false" aria-controls="fixtureFilters teamFilters">
           Show filters
         </button>
 
-        <nav class="teamFilters" aria-label="Team filter">
+        <nav class="teamFilters" id="teamFilters" aria-label="Team filter" hidden>
           <button class="teamFilter isActive" type="button" data-team="all">All Teams</button>
         </nav>
 
-        <div class="filterGrid">
+        <div class="filterGrid" id="fixtureFilters" hidden>
           <label class="field">
             <span id="searchLabel">Search</span>
             <input id="fixtureSearch" type="search" placeholder="Team, opponent, league, venue" autocomplete="off" />

@@ -304,6 +304,13 @@ h1 {
   gap: 0.55rem;
 }
 
+.filterToggle[hidden],
+.fixtureViewTabs[hidden],
+.teamFilters[hidden],
+.filterGrid[hidden] {
+  display: none !important;
+}
+
 .isEventsView .fixtureViewTabs,
 .isEventsView .teamFilters,
 .isEventsView .filterToggle,
