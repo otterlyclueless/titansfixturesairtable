@@ -454,11 +454,14 @@ function toggleInlineFixtureDetails(card, inlineDetails, fixture) {
 
   inlineDetails.innerHTML = createFixtureDetailMarkup(fixture, true);
   inlineDetails.hidden = false;
+  inlineDetails.style.height = "0px";
+  inlineDetails.style.opacity = "0";
   card.classList.add("isExpanded");
   toggle.setAttribute("aria-expanded", "true");
   expandedInlineCard = card;
 
   requestAnimationFrame(() => {
+    animateInlineOpen(inlineDetails);
     card.scrollIntoView({ block: "nearest", behavior: "smooth" });
     postEmbedHeight();
   });
@@ -468,12 +471,11 @@ function collapseInlineFixtureDetails(card) {
   const inlineDetails = card.querySelector(".fixtureInlineDetails");
   const toggle = card.querySelector(".fixtureToggle");
 
-  if (!inlineDetails) {
+  if (!inlineDetails || inlineDetails.hidden) {
     return;
   }
 
-  inlineDetails.hidden = true;
-  inlineDetails.innerHTML = "";
+  animateInlineClose(inlineDetails);
   card.classList.remove("isExpanded");
   toggle?.setAttribute("aria-expanded", "false");
 
@@ -482,6 +484,42 @@ function collapseInlineFixtureDetails(card) {
   }
 
   postEmbedHeight();
+}
+
+function animateInlineOpen(inlineDetails) {
+  inlineDetails.style.height = `${inlineDetails.scrollHeight}px`;
+  inlineDetails.style.opacity = "1";
+
+  const onTransitionEnd = (event) => {
+    if (event.propertyName !== "height") {
+      return;
+    }
+
+    inlineDetails.style.height = "auto";
+    inlineDetails.removeEventListener("transitionend", onTransitionEnd);
+  };
+
+  inlineDetails.addEventListener("transitionend", onTransitionEnd);
+}
+
+function animateInlineClose(inlineDetails) {
+  inlineDetails.style.height = `${inlineDetails.scrollHeight}px`;
+  inlineDetails.style.opacity = "1";
+  inlineDetails.offsetHeight;
+  inlineDetails.style.height = "0px";
+  inlineDetails.style.opacity = "0";
+
+  const onTransitionEnd = (event) => {
+    if (event.propertyName !== "height") {
+      return;
+    }
+
+    inlineDetails.hidden = true;
+    inlineDetails.innerHTML = "";
+    inlineDetails.removeEventListener("transitionend", onTransitionEnd);
+  };
+
+  inlineDetails.addEventListener("transitionend", onTransitionEnd);
 }
 
 function openFixtureModal(fixture) {
