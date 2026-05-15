@@ -8,6 +8,7 @@ let currentSeason = "all";
 let currentStatus = "all";
 let lastFocusedElement = null;
 let expandedInlineCard = null;
+const appRoot = document.getElementById("app") || document.querySelector(".app");
 const currentAudience = getAudienceMode();
 const currentEmbedLayout = getEmbedLayout();
 const TITANS_TEAM_PREFIX = "Titans ";
@@ -116,7 +117,9 @@ function isEmbedMode() {
 }
 
 function setupTabs() {
-  document.querySelectorAll(".tab").forEach((tab) => {
+  const tabs = document.querySelectorAll(".tab");
+
+  tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       currentView = tab.dataset.view;
 
@@ -133,6 +136,10 @@ function setupTabs() {
 
 function setupTeamFilters() {
   const teamFilters = document.querySelector(".teamFilters");
+  if (!teamFilters) {
+    return;
+  }
+
   const teams = getTitansTeams();
 
   teams.forEach((team) => {
@@ -164,6 +171,11 @@ function setupSmartFilters() {
   const competitionFilter = document.getElementById("competitionFilter");
   const seasonFilter = document.getElementById("seasonFilter");
   const statusFilter = document.getElementById("statusFilter");
+  const clearFiltersButton = document.getElementById("clearFilters");
+
+  if (!searchInput || !competitionFilter || !seasonFilter || !statusFilter || !clearFiltersButton) {
+    return;
+  }
 
   searchInput.addEventListener("input", () => {
     currentSearch = searchInput.value.trim().toLowerCase();
@@ -185,7 +197,7 @@ function setupSmartFilters() {
     renderAll();
   });
 
-  document.getElementById("clearFilters").addEventListener("click", () => {
+  clearFiltersButton.addEventListener("click", () => {
     currentSearch = "";
     currentCompetition = "all";
     currentSeason = "all";
@@ -201,6 +213,7 @@ function setupSmartFilters() {
 }
 
 function setupInitialState() {
+  const defaultView = getDefaultView();
   const params = new URLSearchParams(window.location.search);
   const view = params.get("view");
   const team = params.get("team");
@@ -208,6 +221,8 @@ function setupInitialState() {
   const season = params.get("season");
   const status = params.get("status");
   const search = params.get("search");
+
+  currentView = defaultView;
 
   if (["upcoming", "results", "all", "events"].includes(view)) {
     currentView = view;
@@ -248,10 +263,26 @@ function syncControls() {
     filter.classList.toggle("isActive", filter.dataset.team === currentTeam);
   });
 
-  document.getElementById("fixtureSearch").value = currentSearch;
-  document.getElementById("competitionFilter").value = currentCompetition;
-  document.getElementById("seasonFilter").value = currentSeason;
-  document.getElementById("statusFilter").value = currentStatus;
+  const searchInput = document.getElementById("fixtureSearch");
+  const competitionFilter = document.getElementById("competitionFilter");
+  const seasonFilter = document.getElementById("seasonFilter");
+  const statusFilter = document.getElementById("statusFilter");
+
+  if (searchInput) {
+    searchInput.value = currentSearch;
+  }
+
+  if (competitionFilter) {
+    competitionFilter.value = currentCompetition;
+  }
+
+  if (seasonFilter) {
+    seasonFilter.value = currentSeason;
+  }
+
+  if (statusFilter) {
+    statusFilter.value = currentStatus;
+  }
 }
 
 function refreshFilterUi() {
@@ -266,6 +297,10 @@ function refreshFilterUi() {
   const seasonFilter = document.getElementById("seasonFilter");
   const statusField = document.getElementById("statusField");
   const statusFilter = document.getElementById("statusFilter");
+
+  if (!searchLabel || !searchInput || !competitionLabel || !competitionFilter || !seasonField || !seasonFilter || !statusField || !statusFilter) {
+    return;
+  }
 
   teamFilters.hidden = isEventsView;
   filterGrid.hidden = isEventsView;
@@ -306,7 +341,7 @@ function renderAll() {
   refreshFilterUi();
   syncControls();
   document.body.classList.toggle("isEventsView", currentView === "events");
-  document.getElementById("app")?.classList.toggle("isEventsView", currentView === "events");
+  appRoot?.classList.toggle("isEventsView", currentView === "events");
   renderSummary();
   renderHero();
   renderPrimaryList();
@@ -1032,7 +1067,7 @@ function getEmptyStateMessage() {
   }
 
   if (currentView === "events") {
-    return "Try a different event type or search above.";
+    return "Check back soon for the next club event.";
   }
 
   return "Try a different team or switch the view above.";
@@ -1351,6 +1386,11 @@ function getEventTime(event) {
 }
 
 function getAudienceMode() {
+  const bodyAudience = String(document.body?.dataset.audience || "").toLowerCase();
+  if (bodyAudience === "members") {
+    return "members";
+  }
+
   const params = new URLSearchParams(window.location.search);
   const audience = String(params.get("audience") || "").toLowerCase();
   return audience === "members" ? "members" : "public";
@@ -1367,6 +1407,11 @@ function getEmbedLayout() {
 
 function isPanelEmbed() {
   return currentEmbedLayout === "panel";
+}
+
+function getDefaultView() {
+  const bodyValue = String(document.body?.dataset.defaultView || "").toLowerCase();
+  return ["upcoming", "results", "all", "events"].includes(bodyValue) ? bodyValue : "upcoming";
 }
 
 function escapeHtml(value) {

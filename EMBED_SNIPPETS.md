@@ -42,12 +42,11 @@ Use this for the members-facing version. It includes private events as well as p
 <script
   src="https://fixtures.londontitans.com/embed.js"
   data-target="#titans-members-events"
+  data-src="/members-events.html"
   data-title="London Titans Member Events"
-  data-view="events"
-  data-audience="members"
   data-layout="panel"
   data-height="860px"
-  data-min-height="100vh"
+  data-min-height="720px"
 ></script>
 ```
 
@@ -60,8 +59,8 @@ Use this for the public-facing version. Private events are automatically hidden.
 <script
   src="https://fixtures.londontitans.com/embed.js"
   data-target="#titans-public-events"
+  data-src="/events.html"
   data-title="London Titans Events"
-  data-view="events"
   data-min-height="100vh"
 ></script>
 ```
