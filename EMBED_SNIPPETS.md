@@ -1,8 +1,8 @@
 # London Titans Fixtures Widget Embed
 
-Use the Netlify-hosted widget URL for now, not the custom subdomain, until the custom domain has reliable HTTPS.
+Use the GitHub Pages custom domain for the website embed.
 
-Replace `https://YOUR-NETLIFY-SITE.netlify.app` below with the live Netlify URL.
+Primary widget host: `https://fixtures.londontitans.com`
 
 ## Recommended: Full-Page HTML Block With Auto-Resizing
 
@@ -12,7 +12,7 @@ Use this when the Fixtures Centre has its own website page.
 ```html
 <div id="titans-fixtures-widget"></div>
 <script
-  src="https://ltfcfixturesairtable.netlify.app/embed.js"
+  src="https://fixtures.londontitans.com/embed.js"
   data-target="#titans-fixtures-widget"
   data-title="London Titans Fixtures"
   data-min-height="100vh"
@@ -24,7 +24,7 @@ Use this when the Fixtures Centre has its own website page.
 ```html
 <div id="titans-development-widget"></div>
 <script
-  src="https://ltfcfixturesairtable.netlify.app/embed.js"
+  src="https://fixtures.londontitans.com/embed.js"
   data-target="#titans-development-widget"
   data-title="London Titans Development Fixtures"
   data-team="Development"
@@ -39,7 +39,7 @@ Use this only if GoDaddy strips scripts from the HTML block.
 
 ```html
 <iframe
-  src="https://ltfcfixturesairtable.netlify.app/?embed=1"
+  src="https://fixtures.londontitans.com/?embed=1"
   title="London Titans Fixtures"
   loading="lazy"
   style="width:100%;height:100vh;min-height:100vh;border:0;display:block;"
@@ -54,7 +54,7 @@ If the GoDaddy HTML block allows inline styles around the embed, use a wrapper l
 <div style="margin:0;padding:0;width:100%;">
   <div id="titans-fixtures-widget"></div>
   <script
-    src="https://ltfcfixturesairtable.netlify.app/embed.js"
+    src="https://fixtures.londontitans.com/embed.js"
     data-target="#titans-fixtures-widget"
     data-title="London Titans Fixtures"
     data-min-height="100vh"
