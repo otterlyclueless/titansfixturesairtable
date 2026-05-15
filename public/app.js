@@ -269,19 +269,14 @@ function refreshFilterUi() {
 
   teamFilters.hidden = isEventsView;
   filterGrid.hidden = isEventsView;
-  seasonField.hidden = isEventsView;
-  statusField.hidden = isEventsView;
 
   if (isEventsView) {
     currentSearch = "";
     currentCompetition = "all";
     currentSeason = "all";
     currentStatus = "all";
-    searchLabel.textContent = "Search events";
-    searchInput.placeholder = "Event, type, location, description";
     searchInput.value = "";
-    competitionLabel.textContent = "Event type";
-    populateSelect("competitionFilter", getUniqueValuesFromEvents((event) => event.type), "All event types");
+    competitionFilter.value = "all";
     seasonFilter.value = "all";
     statusFilter.value = "all";
   } else {
@@ -290,6 +285,8 @@ function refreshFilterUi() {
     competitionLabel.textContent = "Competition";
     populateSelect("competitionFilter", getUniqueValues((fixture) => getCompetition(fixture)), "All competitions");
     populateSelect("seasonFilter", getUniqueValues((fixture) => getSeason(fixture)), "All seasons");
+    seasonField.hidden = false;
+    statusField.hidden = false;
   }
 
   currentCompetition = optionExists(competitionFilter, currentCompetition) ? currentCompetition : "all";
@@ -322,14 +319,10 @@ function renderSummary() {
     const visibleEvents = getVisibleEvents();
     const upcomingEvents = visibleEvents.filter((event) => getEventStatus(event) === "upcoming");
     const nextEvent = getNextEvent();
-    const privateEvents = visibleEvents.filter((event) => event.isPrivate);
 
-    summaryGrid.className = "summaryGrid summaryGrid--events";
+    summaryGrid.className = "summaryGrid summaryGrid--events summaryGrid--eventsSingle";
     summaryGrid.innerHTML = `
-      ${createSummaryCard("Events", visibleEvents.length, isMembersMode() ? "Members view" : "Public view", "summaryCard--events")}
-      ${createSummaryCard("Upcoming", upcomingEvents.length, nextEvent ? formatKickOff(nextEvent.date, "short") : "No upcoming date", "summaryCard--upcoming")}
-      ${createSummaryCard("Visible", visibleEvents.filter((event) => !event.isPrivate).length, "Public events", "summaryCard--visible")}
-      ${createSummaryCard("Private", isMembersMode() ? privateEvents.length : 0, isMembersMode() ? "Members only" : "Hidden publicly", "summaryCard--private")}
+      ${createSummaryCard("Upcoming Events", upcomingEvents.length, nextEvent ? formatKickOff(nextEvent.date, "short") : "No upcoming date", "summaryCard--upcoming")}
     `;
 
     postEmbedHeight();
@@ -465,10 +458,14 @@ function renderFixtures() {
   const output = document.getElementById("output");
   const listTitle = document.getElementById("listTitle");
   const fixtureCount = document.getElementById("fixtureCount");
+  const listEyebrow = document.querySelector(".listHeader .eyebrow");
   const fixtures = getFilteredFixtures();
 
   output.innerHTML = "";
   output.classList.remove("eventGrid");
+  if (listEyebrow) {
+    listEyebrow.textContent = "Match Centre";
+  }
   listTitle.textContent = getListTitle();
   fixtureCount.textContent = `${fixtures.length} ${fixtures.length === 1 ? "match" : "matches"}`;
 
@@ -494,10 +491,14 @@ function renderEvents() {
   const output = document.getElementById("output");
   const listTitle = document.getElementById("listTitle");
   const fixtureCount = document.getElementById("fixtureCount");
+  const listEyebrow = document.querySelector(".listHeader .eyebrow");
   const events = getFilteredEvents();
 
   output.innerHTML = "";
   output.classList.add("eventGrid");
+  if (listEyebrow) {
+    listEyebrow.textContent = "Event Calendar";
+  }
   listTitle.textContent = isMembersMode() ? "Member Events" : "Events";
   fixtureCount.textContent = `${events.length} ${events.length === 1 ? "event" : "events"}`;
 
@@ -828,24 +829,19 @@ function createEventDetailMarkup(event, inline = false) {
   const posterClass = inline ? "modalPoster fixtureInlinePoster" : "modalPoster";
   const detailsClass = inline ? "modalDetails fixtureInlineBody" : "modalDetails";
   const titleId = inline ? "" : ' id="modalTitle"';
+  const themeClass = getEventThemeClass("eventTypePill", event.type);
 
   return `
-    <div class="${posterClass}">
-      <div class="modalTeams eventPoster"${titleId}>
-        <div class="modalCentre eventCentre">
-          <span class="modalKicker">${escapeHtml(event.type || "Event")}</span>
-          <div class="eventHeading eventHeading--detail">
-            <h3>${escapeHtml(event.name || "Untitled Event")}</h3>
-            ${event.isPrivate ? '<span class="eventPrivacy">Private</span>' : ""}
-          </div>
-          <div class="modalMeta eventDetailMeta">
-            <div><span>Date</span>${formatKickOff(event.date, "long")}</div>
-          </div>
-        </div>
+    <div class="${posterClass} eventPosterShell">
+      <div class="eventDetailIntro"${titleId}>
+        <span class="eventTypePill ${themeClass}">${escapeHtml(event.type || "Event")}</span>
+        <h2 class="eventModalTitle">${escapeHtml(event.name || "Untitled Event")}</h2>
+        ${event.isPrivate ? '<span class="eventPrivacy">Private</span>' : ""}
       </div>
     </div>
 
-    <div class="${detailsClass}">
+    <div class="${detailsClass} eventDetailsBody">
+      ${createDetailRow("Date", formatKickOff(event.date, "long"))}
       ${createOptionalDetailRow("Description", event.description)}
       ${createVenueRow(event.location)}
     </div>
