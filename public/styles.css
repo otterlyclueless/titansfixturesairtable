@@ -275,6 +275,29 @@ h1 {
   box-shadow: 0 0 15px rgba(255, 209, 2, 0.18);
 }
 
+.filterToggle {
+  align-self: start;
+  justify-self: start;
+  min-height: 2rem;
+  border: 1px solid rgba(255, 209, 2, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 209, 2, 0.08);
+  color: var(--titans-gold);
+  cursor: pointer;
+  padding: 0.36rem 0.72rem;
+  font-size: 0.64rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.filterToggle:hover,
+.filterToggle:focus-visible {
+  border-color: var(--titans-gold);
+  background: rgba(255, 209, 2, 0.16);
+  outline: none;
+}
+
 .filterGrid {
   display: grid;
   grid-template-columns: minmax(12rem, 1.6fr) repeat(3, minmax(7rem, 1fr));

@@ -7,6 +7,7 @@ let currentSearch = "";
 let currentCompetition = "all";
 let currentSeason = "all";
 let currentStatus = "all";
+let areFixtureFiltersOpen = false;
 let lastFocusedElement = null;
 let expandedInlineCard = null;
 const appRoot = document.getElementById("app") || document.querySelector(".app");
@@ -171,6 +172,7 @@ function setupSmartFilters() {
   const seasonFilter = document.getElementById("seasonFilter");
   const statusFilter = document.getElementById("statusFilter");
   const clearFiltersButton = document.getElementById("clearFilters");
+  const filterToggle = document.getElementById("filterToggle");
 
   if (!searchInput || !competitionFilter || !seasonFilter || !statusFilter || !clearFiltersButton) {
     return;
@@ -205,6 +207,11 @@ function setupSmartFilters() {
     competitionFilter.value = "all";
     seasonFilter.value = "all";
     statusFilter.value = "all";
+    renderAll();
+  });
+
+  filterToggle?.addEventListener("click", () => {
+    areFixtureFiltersOpen = !areFixtureFiltersOpen;
     renderAll();
   });
 
@@ -297,6 +304,7 @@ function refreshFilterUi() {
   const teamFilters = document.querySelector(".teamFilters");
   const filterGrid = document.querySelector(".filterGrid");
   const fixtureViewTabs = document.querySelector(".fixtureViewTabs");
+  const filterToggle = document.getElementById("filterToggle");
   const searchLabel = document.getElementById("searchLabel");
   const searchInput = document.getElementById("fixtureSearch");
   const competitionLabel = document.getElementById("competitionLabel");
@@ -310,16 +318,24 @@ function refreshFilterUi() {
     return;
   }
 
+  const showFixtureFilters = !isEventsView && areFixtureFiltersOpen;
+
   if (teamFilters) {
-    teamFilters.hidden = isEventsView;
+    teamFilters.hidden = !showFixtureFilters;
   }
 
   if (filterGrid) {
-    filterGrid.hidden = isEventsView;
+    filterGrid.hidden = !showFixtureFilters;
   }
 
   if (fixtureViewTabs) {
     fixtureViewTabs.hidden = isEventsView;
+  }
+
+  if (filterToggle) {
+    filterToggle.hidden = isEventsView;
+    filterToggle.setAttribute("aria-expanded", String(showFixtureFilters));
+    filterToggle.textContent = showFixtureFilters ? "Hide filters" : "Show filters";
   }
 
   if (isEventsView) {
