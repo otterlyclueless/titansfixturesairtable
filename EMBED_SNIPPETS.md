@@ -33,6 +33,37 @@ Use this when the Fixtures Centre has its own website page.
 ></script>
 ```
 
+## Members Events Example
+
+Use this for the members-facing version. It includes private events as well as public ones.
+
+```html
+<div id="titans-members-events"></div>
+<script
+  src="https://fixtures.londontitans.com/embed.js"
+  data-target="#titans-members-events"
+  data-title="London Titans Member Events"
+  data-view="events"
+  data-audience="members"
+  data-min-height="100vh"
+></script>
+```
+
+## Public Events Example
+
+Use this for the public-facing version. Private events are automatically hidden.
+
+```html
+<div id="titans-public-events"></div>
+<script
+  src="https://fixtures.londontitans.com/embed.js"
+  data-target="#titans-public-events"
+  data-title="London Titans Events"
+  data-view="events"
+  data-min-height="100vh"
+></script>
+```
+
 ## Fallback: Full-Page Iframe
 
 Use this only if GoDaddy strips scripts from the HTML block.
@@ -69,6 +100,8 @@ These can be passed as `data-*` attributes on the script embed:
 - `data-view="upcoming"`
 - `data-view="results"`
 - `data-view="all"`
+- `data-view="events"`
+- `data-audience="members"`
 - `data-team="Development"`
 - `data-team="Turner"`
 - `data-competition="LUL Division 1"`

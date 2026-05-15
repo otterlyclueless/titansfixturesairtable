@@ -1,4 +1,5 @@
 let allFixtures = [];
+let allEvents = [];
 let currentView = "upcoming";
 let currentTeam = "all";
 let currentSearch = "";
@@ -7,6 +8,7 @@ let currentSeason = "all";
 let currentStatus = "all";
 let lastFocusedElement = null;
 let expandedInlineCard = null;
+const currentAudience = getAudienceMode();
 const TITANS_TEAM_PREFIX = "Titans ";
 
 async function loadFixtures() {
@@ -16,7 +18,9 @@ async function loadFixtures() {
     status.classList.remove("isError");
     status.textContent = "Syncing";
 
-    allFixtures = await fetchFixtures();
+    const data = await fetchFixtures();
+    allFixtures = Array.isArray(data) ? data : (data.fixtures || []);
+    allEvents = Array.isArray(data) ? [] : (data.events || []);
 
     status.textContent = "Live";
 
@@ -35,6 +39,7 @@ async function loadFixtures() {
 
 function handleLoadError(status) {
   allFixtures = [];
+  allEvents = [];
   status.classList.add("isError");
   status.textContent = "Offline";
 
@@ -47,11 +52,12 @@ function handleLoadError(status) {
 }
 
 async function fetchFixtures() {
-  const response = await fetch("fixtures.json");
+  const dataFile = isMembersMode() ? "members.json" : "fixtures.json";
+  const response = await fetch(dataFile);
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.error || "Failed to load fixtures.json");
+    throw new Error(data.error || `Failed to load ${dataFile}`);
   }
 
   return data;
@@ -149,9 +155,6 @@ function setupTeamFilters() {
 }
 
 function setupSmartFilters() {
-  populateSelect("competitionFilter", getUniqueValues((fixture) => getCompetition(fixture)), "All competitions");
-  populateSelect("seasonFilter", getUniqueValues((fixture) => getSeason(fixture)), "All seasons");
-
   const searchInput = document.getElementById("fixtureSearch");
   const competitionFilter = document.getElementById("competitionFilter");
   const seasonFilter = document.getElementById("seasonFilter");
@@ -188,6 +191,8 @@ function setupSmartFilters() {
     statusFilter.value = "all";
     renderAll();
   });
+
+  refreshFilterUi();
 }
 
 function setupInitialState() {
@@ -199,7 +204,7 @@ function setupInitialState() {
   const status = params.get("status");
   const search = params.get("search");
 
-  if (["upcoming", "results", "all"].includes(view)) {
+  if (["upcoming", "results", "all", "events"].includes(view)) {
     currentView = view;
   }
 
@@ -244,14 +249,78 @@ function syncControls() {
   document.getElementById("statusFilter").value = currentStatus;
 }
 
+function refreshFilterUi() {
+  const isEventsView = currentView === "events";
+  const teamFilters = document.querySelector(".teamFilters");
+  const searchLabel = document.getElementById("searchLabel");
+  const searchInput = document.getElementById("fixtureSearch");
+  const competitionLabel = document.getElementById("competitionLabel");
+  const competitionFilter = document.getElementById("competitionFilter");
+  const seasonField = document.getElementById("seasonField");
+  const seasonFilter = document.getElementById("seasonFilter");
+  const statusField = document.getElementById("statusField");
+  const statusFilter = document.getElementById("statusFilter");
+
+  teamFilters.hidden = isEventsView;
+  seasonField.hidden = isEventsView;
+  statusField.hidden = isEventsView;
+
+  if (isEventsView) {
+    searchLabel.textContent = "Search events";
+    searchInput.placeholder = "Event, type, location, description";
+    competitionLabel.textContent = "Event type";
+    populateSelect("competitionFilter", getUniqueValuesFromEvents((event) => event.type), "All event types");
+    seasonFilter.value = "all";
+    statusFilter.value = "all";
+  } else {
+    searchLabel.textContent = "Search";
+    searchInput.placeholder = "Team, opponent, league, venue";
+    competitionLabel.textContent = "Competition";
+    populateSelect("competitionFilter", getUniqueValues((fixture) => getCompetition(fixture)), "All competitions");
+    populateSelect("seasonFilter", getUniqueValues((fixture) => getSeason(fixture)), "All seasons");
+  }
+
+  currentCompetition = optionExists(competitionFilter, currentCompetition) ? currentCompetition : "all";
+  currentSeason = optionExists(seasonFilter, currentSeason) ? currentSeason : "all";
+  currentStatus = optionExists(statusFilter, currentStatus) ? currentStatus : "all";
+
+  competitionFilter.value = currentCompetition;
+  seasonFilter.value = currentSeason;
+  statusFilter.value = currentStatus;
+}
+
+function optionExists(select, value) {
+  return [...select.options].some((option) => option.value === value);
+}
+
 function renderAll() {
+  refreshFilterUi();
+  syncControls();
   renderSummary();
   renderHero();
-  renderFixtures();
+  renderPrimaryList();
 }
 
 function renderSummary() {
   const summaryGrid = document.getElementById("summaryGrid");
+
+  if (currentView === "events") {
+    const visibleEvents = getVisibleEvents();
+    const upcomingEvents = visibleEvents.filter((event) => getEventStatus(event) === "upcoming");
+    const nextEvent = getNextEvent();
+    const privateEvents = visibleEvents.filter((event) => event.isPrivate);
+
+    summaryGrid.innerHTML = `
+      ${createSummaryCard("Events", visibleEvents.length, isMembersMode() ? "Members view" : "Public view")}
+      ${createSummaryCard("Upcoming", upcomingEvents.length, nextEvent ? formatKickOff(nextEvent.date, "short") : "No upcoming date")}
+      ${createSummaryCard("Visible", visibleEvents.filter((event) => !event.isPrivate).length, "Public events")}
+      ${createSummaryCard("Private", isMembersMode() ? privateEvents.length : 0, isMembersMode() ? "Members only" : "Hidden publicly")}
+    `;
+
+    postEmbedHeight();
+    return;
+  }
+
   const teamFixtures = getTeamScopedFixtures();
   const playedFixtures = teamFixtures.filter((fixture) => getSmartStatus(fixture).key === "played");
   const upcomingFixtures = teamFixtures.filter((fixture) => getSmartStatus(fixture).key === "upcoming");
@@ -277,6 +346,15 @@ function createSummaryCard(label, value, detail) {
       <p>${escapeHtml(detail)}</p>
     </article>
   `;
+}
+
+function renderPrimaryList() {
+  if (currentView === "events") {
+    renderEvents();
+    return;
+  }
+
+  renderFixtures();
 }
 
 function getFilteredFixtures() {
@@ -330,6 +408,20 @@ function getFilteredFixtures() {
 
 function renderHero() {
   const hero = document.getElementById("hero");
+
+  if (currentView === "events") {
+    const nextEvent = getNextEvent();
+
+    hero.innerHTML = nextEvent ? `
+      <div class="nextFixtures">
+        ${createNextEventMarkup(nextEvent)}
+      </div>
+    ` : "";
+
+    postEmbedHeight();
+    return;
+  }
+
   const nextClubFixture = getNextFixture("all");
   const nextTeamFixture = currentTeam === "all" ? null : getNextFixture(currentTeam);
   const cards = [createNextFixtureMarkup("Next club fixture", nextClubFixture)];
@@ -376,6 +468,34 @@ function renderFixtures() {
 
   fixtures.forEach((fixture) => {
     output.appendChild(createFixtureCard(fixture));
+  });
+
+  postEmbedHeight();
+}
+
+function renderEvents() {
+  const output = document.getElementById("output");
+  const listTitle = document.getElementById("listTitle");
+  const fixtureCount = document.getElementById("fixtureCount");
+  const events = getFilteredEvents();
+
+  output.innerHTML = "";
+  listTitle.textContent = isMembersMode() ? "Member Events" : "Events";
+  fixtureCount.textContent = `${events.length} ${events.length === 1 ? "event" : "events"}`;
+
+  if (events.length === 0) {
+    output.innerHTML = `
+      <div class="emptyState">
+        <h2>No events found</h2>
+        <p>${escapeHtml(getEmptyStateMessage())}</p>
+      </div>
+    `;
+    postEmbedHeight();
+    return;
+  }
+
+  events.forEach((event) => {
+    output.appendChild(createEventCard(event));
   });
 
   postEmbedHeight();
@@ -437,6 +557,80 @@ function createFixtureCard(fixture) {
   });
 
   return card;
+}
+
+function createEventCard(event) {
+  const card = document.createElement("article");
+  const embedMode = isEmbedMode();
+  const eventStatus = getEventStatus(event);
+  const eventTypeClass = getEventThemeClass("eventCard", event.type);
+
+  card.className = `fixtureCard eventCard ${eventTypeClass}`.trim();
+
+  card.innerHTML = `
+    <button
+      class="fixtureToggle"
+      type="button"
+      ${embedMode ? 'aria-expanded="false"' : 'aria-haspopup="dialog"'}
+    >
+      <div class="fixtureTop">
+        <span class="league">${escapeHtml(event.type || "Event")}</span>
+        <span class="result result--${eventStatus === "upcoming" ? "upcoming" : "played"}">${escapeHtml(eventStatus === "upcoming" ? "Upcoming" : "Past")}</span>
+      </div>
+
+      <div class="eventHeading">
+        <h3>${escapeHtml(event.name || "Untitled Event")}</h3>
+        ${event.isPrivate ? '<span class="eventPrivacy">Private</span>' : ""}
+      </div>
+
+      <div class="fixtureMeta eventMeta">
+        <div>${formatKickOff(event.date, "long")}</div>
+        <div>${escapeHtml(event.location || "Location TBC")}</div>
+      </div>
+    </button>
+    <div class="fixtureInlineDetails" hidden></div>
+  `;
+
+  const toggle = card.querySelector(".fixtureToggle");
+  const inlineDetails = card.querySelector(".fixtureInlineDetails");
+
+  toggle.addEventListener("click", () => {
+    if (embedMode) {
+      toggleInlineEventDetails(card, inlineDetails, event);
+      return;
+    }
+
+    openEventModal(event);
+  });
+
+  return card;
+}
+
+function toggleInlineEventDetails(card, inlineDetails, event) {
+  const isOpen = !inlineDetails.hidden;
+
+  if (expandedInlineCard && expandedInlineCard !== card) {
+    collapseInlineFixtureDetails(expandedInlineCard);
+  }
+
+  if (isOpen) {
+    collapseInlineFixtureDetails(card);
+    return;
+  }
+
+  inlineDetails.innerHTML = createEventDetailMarkup(event, true);
+  inlineDetails.hidden = false;
+  inlineDetails.style.height = "0px";
+  inlineDetails.style.opacity = "0";
+  card.classList.add("isExpanded");
+  card.querySelector(".fixtureToggle")?.setAttribute("aria-expanded", "true");
+  expandedInlineCard = card;
+
+  requestAnimationFrame(() => {
+    animateInlineOpen(inlineDetails);
+    card.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    postEmbedHeight();
+  });
 }
 
 function toggleInlineFixtureDetails(card, inlineDetails, fixture) {
@@ -539,6 +733,21 @@ function openFixtureModal(fixture) {
   closeButton.focus();
 }
 
+function openEventModal(event) {
+  const modal = document.getElementById("fixtureModal");
+  const modalContent = document.getElementById("modalContent");
+  const closeButton = modal.querySelector(".modalClose");
+
+  lastFocusedElement = document.activeElement;
+  modal.querySelector(".modalDialog").className = `modalDialog ${getEventThemeClass("modalDialog", event.type)}`;
+  modal.querySelector(".modalDialog").dataset.competitionLabel = event.type || "Event";
+  modalContent.innerHTML = createEventDetailMarkup(event);
+
+  modal.hidden = false;
+  document.body.classList.add("hasModal");
+  closeButton.focus();
+}
+
 function closeFixtureModal() {
   const modal = document.getElementById("fixtureModal");
 
@@ -597,6 +806,34 @@ function createFixtureDetailMarkup(fixture, inline = false) {
   `;
 }
 
+function createEventDetailMarkup(event, inline = false) {
+  const posterClass = inline ? "modalPoster fixtureInlinePoster" : "modalPoster";
+  const detailsClass = inline ? "modalDetails fixtureInlineBody" : "modalDetails";
+  const titleId = inline ? "" : ' id="modalTitle"';
+
+  return `
+    <div class="${posterClass}">
+      <div class="modalTeams eventPoster"${titleId}>
+        <div class="modalCentre eventCentre">
+          <span class="modalKicker">${escapeHtml(event.type || "Event")}</span>
+          <div class="eventHeading eventHeading--detail">
+            <h3>${escapeHtml(event.name || "Untitled Event")}</h3>
+            ${event.isPrivate ? '<span class="eventPrivacy">Private</span>' : ""}
+          </div>
+          <div class="modalMeta eventDetailMeta">
+            <div><span>Date</span>${formatKickOff(event.date, "long")}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="${detailsClass}">
+      ${createOptionalDetailRow("Description", event.description)}
+      ${createVenueRow(event.location)}
+    </div>
+  `;
+}
+
 function createNextFixtureMarkup(label, fixture) {
   if (!fixture) {
     return "";
@@ -627,6 +864,27 @@ function createNextFixtureMarkup(label, fixture) {
         <div>${formatKickOff(fixture.kickOff, "long")}</div>
         <div>${escapeHtml(fixture.location || "Location TBC")}</div>
         <div>${escapeHtml(getSeason(fixture))}</div>
+      </div>
+    </article>
+  `;
+}
+
+function createNextEventMarkup(event) {
+  return `
+    <article class="heroCard ${getEventThemeClass("heroCard", event.type)}">
+      <div class="heroTop">
+        <span class="heroLabel">${isMembersMode() ? "Next member event" : "Next event"}</span>
+        <span class="heroLeague">${escapeHtml(event.type || "Event")}</span>
+      </div>
+
+      <div class="eventHeroHeading">
+        <h2>${escapeHtml(event.name || "Untitled Event")}</h2>
+        ${event.isPrivate ? '<span class="eventPrivacy">Private</span>' : ""}
+      </div>
+
+      <div class="heroMeta">
+        <div>${formatKickOff(event.date, "long")}</div>
+        <div>${escapeHtml(event.location || "Location TBC")}</div>
       </div>
     </article>
   `;
@@ -701,6 +959,43 @@ function getNextFixture(team) {
     .sort(sortFixtures)[0];
 }
 
+function getVisibleEvents() {
+  return allEvents.filter((event) => isMembersMode() || !event.isPrivate);
+}
+
+function getFilteredEvents() {
+  return getVisibleEvents()
+    .filter((event) => {
+      if (currentCompetition !== "all" && event.type !== currentCompetition) {
+        return false;
+      }
+
+      if (currentSearch && !getEventSearchText(event).includes(currentSearch)) {
+        return false;
+      }
+
+      return true;
+    })
+    .sort(sortEvents);
+}
+
+function getNextEvent() {
+  return getVisibleEvents()
+    .filter((event) => getEventStatus(event) === "upcoming")
+    .filter((event) => {
+      if (currentCompetition !== "all" && event.type !== currentCompetition) {
+        return false;
+      }
+
+      if (currentSearch && !getEventSearchText(event).includes(currentSearch)) {
+        return false;
+      }
+
+      return true;
+    })
+    .sort((a, b) => getEventTime(a) - getEventTime(b))[0];
+}
+
 function getListTitle() {
   const team = getTeamLabel();
 
@@ -720,6 +1015,10 @@ function getEmptyStateMessage() {
 
   if (status?.classList.contains("isError")) {
     return "Fixture data is temporarily unavailable. Please try again shortly.";
+  }
+
+  if (currentView === "events") {
+    return "Try a different event type or search above.";
   }
 
   return "Try a different team or switch the view above.";
@@ -803,6 +1102,14 @@ function getSmartStatus(fixture) {
   return { key: "upcoming", label: "Upcoming" };
 }
 
+function getEventStatus(event) {
+  if (!event.date) {
+    return "upcoming";
+  }
+
+  return new Date(event.date) < new Date() ? "past" : "upcoming";
+}
+
 function normalizeStatus(value) {
   const status = String(value || "").toLowerCase();
 
@@ -846,6 +1153,17 @@ function getCompetitionClasses(fixture) {
   if (matchTypes.includes("final")) classes.push("fixtureCard--final");
 
   return classes.join(" ");
+}
+
+function getEventThemeClass(prefix, eventType) {
+  const value = String(eventType || "").trim().toLowerCase();
+
+  if (value.includes("ball")) return `${prefix}--ball`;
+  if (value.includes("social")) return `${prefix}--social`;
+  if (value.includes("training")) return `${prefix}--training`;
+  if (value.includes("tournament")) return `${prefix}--tournament`;
+
+  return "";
 }
 
 function getHeroCardClasses(fixture) {
@@ -921,8 +1239,26 @@ function getSearchText(fixture) {
     .toLowerCase();
 }
 
+function getEventSearchText(event) {
+  return [
+    event.name,
+    event.type,
+    event.description,
+    event.location
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+}
+
 function getUniqueValues(getter) {
   return [...new Set(allFixtures.map(getter).filter(Boolean))].sort((a, b) =>
+    a.localeCompare(b, "en-GB", { numeric: true })
+  );
+}
+
+function getUniqueValuesFromEvents(getter) {
+  return [...new Set(getVisibleEvents().map(getter).filter(Boolean))].sort((a, b) =>
     a.localeCompare(b, "en-GB", { numeric: true })
   );
 }
@@ -979,6 +1315,35 @@ function sortFixtures(a, b) {
 
 function getFixtureTime(fixture) {
   return new Date(fixture.kickOff || "0001-01-01").getTime();
+}
+
+function sortEvents(a, b) {
+  const aStatus = getEventStatus(a);
+  const bStatus = getEventStatus(b);
+
+  if (aStatus !== bStatus) {
+    return aStatus === "upcoming" ? -1 : 1;
+  }
+
+  if (aStatus === "upcoming") {
+    return getEventTime(a) - getEventTime(b);
+  }
+
+  return getEventTime(b) - getEventTime(a);
+}
+
+function getEventTime(event) {
+  return new Date(event.date || "9999-12-31").getTime();
+}
+
+function getAudienceMode() {
+  const params = new URLSearchParams(window.location.search);
+  const audience = String(params.get("audience") || "").toLowerCase();
+  return audience === "members" ? "members" : "public";
+}
+
+function isMembersMode() {
+  return currentAudience === "members";
 }
 
 function escapeHtml(value) {

@@ -30,6 +30,7 @@
           <button class="tab isActive" data-view="upcoming">Upcoming</button>
           <button class="tab" data-view="results">Results</button>
           <button class="tab" data-view="all">All</button>
+          <button class="tab" data-view="events">Events</button>
         </nav>
 
         <nav class="teamFilters" aria-label="Team filter">
@@ -38,25 +39,25 @@
 
         <div class="filterGrid">
           <label class="field">
-            <span>Search</span>
+            <span id="searchLabel">Search</span>
             <input id="fixtureSearch" type="search" placeholder="Team, opponent, league, venue" autocomplete="off" />
           </label>
 
-          <label class="field">
-            <span>Competition</span>
+          <label class="field" id="competitionField">
+            <span id="competitionLabel">Competition</span>
             <select id="competitionFilter">
               <option value="all">All competitions</option>
             </select>
           </label>
 
-          <label class="field">
+          <label class="field" id="seasonField">
             <span>Season</span>
             <select id="seasonFilter">
               <option value="all">All seasons</option>
             </select>
           </label>
 
-          <label class="field">
+          <label class="field" id="statusField">
             <span>Status</span>
             <select id="statusFilter">
               <option value="all">All statuses</option>

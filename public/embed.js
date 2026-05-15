@@ -9,7 +9,7 @@
 
   const scriptUrl = new URL(currentScript.src);
   const widgetUrl = new URL(currentScript.dataset.src || "/", scriptUrl.origin);
-  const passthroughParams = ["view", "team", "competition", "season", "status", "search"];
+  const passthroughParams = ["view", "team", "competition", "season", "status", "search", "audience"];
 
   widgetUrl.searchParams.set("embed", "1");
 

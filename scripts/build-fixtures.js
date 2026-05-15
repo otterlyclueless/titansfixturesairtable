@@ -10,6 +10,7 @@ const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
 const FIXTURES_TABLE_ID = process.env.AIRTABLE_FIXTURES_TABLE_ID;
 const TEAMS_TABLE_ID = process.env.AIRTABLE_TEAMS_TABLE_ID;
+const EVENTS_TABLE_ID = process.env.AIRTABLE_EVENTS_TABLE_ID || "tblfbGDuFxT8t6tCF";
 
 const requiredVariables = {
   AIRTABLE_BASE_ID,
@@ -118,17 +119,47 @@ function cleanFixtures(fixtures, teams) {
   });
 }
 
-async function main() {
-  const [fixtures, teams] = await Promise.all([
-    fetchTable(FIXTURES_TABLE_ID),
-    fetchTable(TEAMS_TABLE_ID)
-  ]);
-  const outputPath = path.join(process.cwd(), "public", "fixtures.json");
-  const cleanData = cleanFixtures(fixtures, teams);
+function cleanEvents(events) {
+  return events.map((event) => {
+    const fields = event.fields;
 
-  await mkdir(path.dirname(outputPath), { recursive: true });
-  await writeFile(outputPath, `${JSON.stringify(cleanData, null, 2)}\n`);
-  console.log(`Wrote ${cleanData.length} fixtures to ${outputPath}`);
+    return {
+      id: event.id,
+      name: fields["Event Name"] || "",
+      type: fields["Event Type"] || "",
+      date: fields.Date || null,
+      description: fields.Description || "",
+      location: fields.Location || "",
+      isPrivate: Boolean(fields.Private)
+    };
+  });
+}
+
+async function main() {
+  const [fixtures, teams, events] = await Promise.all([
+    fetchTable(FIXTURES_TABLE_ID),
+    fetchTable(TEAMS_TABLE_ID),
+    fetchTable(EVENTS_TABLE_ID)
+  ]);
+  const publicOutputPath = path.join(process.cwd(), "public", "fixtures.json");
+  const membersOutputPath = path.join(process.cwd(), "public", "members.json");
+  const cleanFixturesData = cleanFixtures(fixtures, teams);
+  const cleanEventsData = cleanEvents(events);
+  const publicData = {
+    fixtures: cleanFixturesData,
+    events: cleanEventsData.filter((event) => !event.isPrivate)
+  };
+  const membersData = {
+    fixtures: cleanFixturesData,
+    events: cleanEventsData
+  };
+
+  await mkdir(path.dirname(publicOutputPath), { recursive: true });
+  await writeFile(publicOutputPath, `${JSON.stringify(publicData, null, 2)}\n`);
+  await writeFile(membersOutputPath, `${JSON.stringify(membersData, null, 2)}\n`);
+  console.log(
+    `Wrote ${publicData.fixtures.length} fixtures, ${publicData.events.length} public events, and ${membersData.events.length} total events`
+  );
 }
 
 main().catch((error) => {
