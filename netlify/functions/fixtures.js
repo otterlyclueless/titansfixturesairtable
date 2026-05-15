@@ -4,24 +4,51 @@ const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
 const FIXTURES_TABLE_ID = process.env.AIRTABLE_FIXTURES_TABLE_ID;
 const TEAMS_TABLE_ID = process.env.AIRTABLE_TEAMS_TABLE_ID;
 
+const requiredVariables = {
+  AIRTABLE_BASE_ID,
+  AIRTABLE_TOKEN,
+  AIRTABLE_FIXTURES_TABLE_ID: FIXTURES_TABLE_ID,
+  AIRTABLE_TEAMS_TABLE_ID: TEAMS_TABLE_ID
+};
+
 async function fetchTable(tableId) {
-  const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${tableId}`;
+  const records = [];
+  let offset = "";
 
-  const response = await fetch(url, {
-    headers: {
-      Authorization: `Bearer ${AIRTABLE_TOKEN}`
+  do {
+    const url = new URL(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${tableId}`);
+
+    if (offset) {
+      url.searchParams.set("offset", offset);
     }
-  });
 
-  if (!response.ok) {
-    const errorText = await response.text();
+    const response = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${AIRTABLE_TOKEN}`
+      }
+    });
 
-    throw new Error(errorText);
+    if (!response.ok) {
+      const errorText = await response.text();
+
+      throw new Error(errorText);
+    }
+
+    const data = await response.json();
+
+    records.push(...data.records);
+    offset = data.offset || "";
+  } while (offset);
+
+  return records;
+}
+
+function assertRequiredVariables() {
+  for (const [name, value] of Object.entries(requiredVariables)) {
+    if (!value) {
+      throw new Error(`Missing required environment variable: ${name}`);
+    }
   }
-
-  const data = await response.json();
-
-  return data.records;
 }
 
 function getAttachmentUrl(fields, fieldNames) {
@@ -47,6 +74,8 @@ function getAttachmentUrl(fields, fieldNames) {
 
 exports.handler = async function () {
   try {
+    assertRequiredVariables();
+
     const fixtures = await fetchTable(FIXTURES_TABLE_ID);
     const teams = await fetchTable(TEAMS_TABLE_ID);
 
@@ -88,6 +117,7 @@ exports.handler = async function () {
 
         league: fields.League || "",
         competition: fields.Competition || fields.League || "",
+        matchType: fields["Match Type"] || "",
         season: fields.Season || "",
         status: fields.Status || "",
         result: fields.Result || "",

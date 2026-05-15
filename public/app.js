@@ -13,11 +13,11 @@ async function loadFixtures() {
 
   try {
     status.classList.remove("isError");
-    status.textContent = "Loading live data...";
+    status.textContent = "Syncing";
 
     allFixtures = await fetchFixtures();
 
-    status.textContent = `${allFixtures.length} fixtures loaded`;
+    status.textContent = "Live";
 
     setupTabs();
     setupTeamFilters();
@@ -28,9 +28,21 @@ async function loadFixtures() {
     renderAll();
   } catch (error) {
     console.error(error);
-    status.classList.add("isError");
-    status.textContent = "Failed to load data";
+    handleLoadError(status);
   }
+}
+
+function handleLoadError(status) {
+  allFixtures = [];
+  status.classList.add("isError");
+  status.textContent = "Offline";
+
+  setupTabs();
+  setupSmartFilters();
+  setupInitialState();
+  setupModal();
+  setupEmbedResize();
+  renderAll();
 }
 
 async function fetchFixtures() {
@@ -365,7 +377,7 @@ function renderFixtures() {
     output.innerHTML = `
       <div class="emptyState">
         <h2>No fixtures found</h2>
-        <p>Try a different team or switch the view above.</p>
+        <p>${escapeHtml(getEmptyStateMessage())}</p>
       </div>
     `;
     postEmbedHeight();
@@ -412,8 +424,6 @@ function createFixtureCard(fixture) {
 
       <div class="fixtureMeta">
         <div>${formatKickOff(fixture.kickOff, "short")}</div>
-        <div>${escapeHtml(fixture.location || "Location TBC")}</div>
-        <div>${escapeHtml(getSeason(fixture))}</div>
       </div>
     </button>
   `;
@@ -499,10 +509,10 @@ function createNextFixtureMarkup(label, fixture) {
   }
 
   return `
-    <article class="heroCard">
+    <article class="heroCard ${getHeroCardClasses(fixture)}">
       <div class="heroTop">
         <span class="heroLabel">${escapeHtml(label)}</span>
-        <span class="heroLeague">${escapeHtml(getCompetition(fixture))}</span>
+        <span class="heroLeague">${escapeHtml(getCompetitionLabel(fixture))}</span>
       </div>
 
       <div class="heroTeams">
@@ -609,6 +619,16 @@ function getListTitle() {
   }
 
   return `${team} Upcoming`;
+}
+
+function getEmptyStateMessage() {
+  const status = document.getElementById("status");
+
+  if (status?.classList.contains("isError")) {
+    return "Fixture data is temporarily unavailable. Please try again shortly.";
+  }
+
+  return "Try a different team or switch the view above.";
 }
 
 function getTeamLabel() {
@@ -722,50 +742,49 @@ function getTitansSideClass(fixture, side) {
 }
 
 function getCompetitionClasses(fixture) {
-  const competition = getCompetitionSearchValue(fixture);
+  const matchTypes = getMatchTypes(fixture);
   const classes = [];
 
-  if (competition.includes("cup")) classes.push("fixtureCard--cup");
-  if (competition.includes("plate")) classes.push("fixtureCard--plate");
-  if (competition.includes("shield")) classes.push("fixtureCard--shield");
-  if (competition.includes("friendly")) classes.push("fixtureCard--friendly");
-  if (isFinalFixture(fixture)) classes.push("fixtureCard--final");
+  if (matchTypes.includes("cup")) classes.push("fixtureCard--cup");
+  if (matchTypes.includes("plate")) classes.push("fixtureCard--plate");
+  if (matchTypes.includes("shield")) classes.push("fixtureCard--shield");
+  if (matchTypes.includes("friendly")) classes.push("fixtureCard--friendly");
+  if (matchTypes.includes("final")) classes.push("fixtureCard--final");
 
   return classes.join(" ");
+}
+
+function getHeroCardClasses(fixture) {
+  return getCompetitionClasses(fixture).replaceAll("fixtureCard", "heroCard");
 }
 
 function getCompetitionLabel(fixture) {
   const competition = getCompetition(fixture);
 
-  if (isFinalFixture(fixture) && !competition.toLowerCase().includes("final")) {
+  if (getMatchTypes(fixture).includes("final") && !competition.toLowerCase().includes("final")) {
     return `${getCompetition(fixture)} Final`;
   }
 
   return competition;
 }
 
-function isFinalFixture(fixture) {
-  return /\bfinal\b/i.test(getCompetitionSearchValue(fixture)) &&
-    !/\bsemi[-\s]?final\b/i.test(getCompetitionSearchValue(fixture));
-}
+function getMatchTypes(fixture) {
+  const rawMatchType = fixture.matchType;
 
-function getCompetitionSearchValue(fixture) {
-  return [
-    fixture.match,
-    fixture.competition,
-    fixture.league,
-    fixture.notes
-  ]
-    .filter(Boolean)
-    .join(" ")
-    .toLowerCase();
+  if (Array.isArray(rawMatchType)) {
+    return rawMatchType.map((value) => String(value || "").trim().toLowerCase()).filter(Boolean);
+  }
+
+  const value = String(rawMatchType || "").trim().toLowerCase();
+
+  return value ? [value] : [];
 }
 
 function sortFilteredFixtures(a, b) {
   const aTime = getFixtureTime(a);
   const bTime = getFixtureTime(b);
 
-  if (currentView === "results" || currentStatus === "played") {
+  if (currentView === "results" || currentStatus === "played" || currentView === "all") {
     return bTime - aTime;
   }
 

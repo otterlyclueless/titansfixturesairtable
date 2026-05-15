@@ -435,6 +435,87 @@ h1 {
   pointer-events: none;
 }
 
+.heroCard--cup {
+  border-color: rgba(255, 209, 2, 0.52);
+  background:
+    linear-gradient(90deg, rgba(255, 209, 2, 0.98) 0 0.34rem, transparent 0.34rem),
+    radial-gradient(circle at top right, rgba(255, 247, 173, 0.22), transparent 30%),
+    linear-gradient(135deg, rgba(255, 209, 2, 0.18), rgba(255, 255, 255, 0.035)),
+    var(--panel);
+  box-shadow:
+    0 0 0 1px rgba(255, 209, 2, 0.1),
+    0 16px 34px rgba(255, 209, 2, 0.14);
+}
+
+.heroCard--plate {
+  border-color: rgba(203, 213, 225, 0.48);
+  background:
+    linear-gradient(90deg, rgba(203, 213, 225, 0.95) 0 0.34rem, transparent 0.34rem),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 30%),
+    linear-gradient(135deg, rgba(203, 213, 225, 0.16), rgba(255, 255, 255, 0.035)),
+    var(--panel);
+  box-shadow:
+    0 0 0 1px rgba(203, 213, 225, 0.1),
+    0 16px 34px rgba(203, 213, 225, 0.12);
+}
+
+.heroCard--shield {
+  border-color: rgba(205, 127, 50, 0.52);
+  background:
+    linear-gradient(90deg, rgba(139, 211, 255, 0.92) 0 0.18rem, rgba(205, 127, 50, 0.96) 0.18rem 0.34rem, transparent 0.34rem),
+    radial-gradient(circle at top right, rgba(139, 211, 255, 0.18), transparent 30%),
+    linear-gradient(135deg, rgba(96, 165, 250, 0.16), transparent 30%),
+    linear-gradient(315deg, rgba(205, 127, 50, 0.18), transparent 42%),
+    var(--panel);
+  box-shadow:
+    0 0 0 1px rgba(205, 127, 50, 0.1),
+    0 16px 34px rgba(96, 165, 250, 0.12),
+    0 16px 34px rgba(205, 127, 50, 0.12);
+}
+
+.heroCard--friendly {
+  border-color: rgba(245, 171, 185, 0.48);
+  background:
+    linear-gradient(90deg, rgba(245, 171, 185, 0.92) 0 0.16rem, rgba(91, 207, 250, 0.95) 0.16rem 0.34rem, transparent 0.34rem),
+    radial-gradient(circle at top right, rgba(91, 207, 250, 0.16), transparent 28%),
+    linear-gradient(135deg, rgba(245, 171, 185, 0.16), rgba(91, 207, 250, 0.08)),
+    var(--panel);
+  box-shadow:
+    0 0 0 1px rgba(245, 171, 185, 0.08),
+    0 16px 34px rgba(91, 207, 250, 0.12);
+}
+
+.heroCard--final {
+  border-color: rgba(225, 29, 72, 0.64);
+  background:
+    linear-gradient(90deg, rgba(225, 29, 72, 0.96) 0 0.16rem, rgba(255, 209, 2, 0.98) 0.16rem 0.34rem, transparent 0.34rem),
+    radial-gradient(circle at top right, rgba(225, 29, 72, 0.24), transparent 26%),
+    linear-gradient(135deg, rgba(255, 209, 2, 0.18), transparent 36%),
+    var(--panel);
+  box-shadow:
+    0 0 0 1px rgba(255, 209, 2, 0.12),
+    0 18px 38px rgba(225, 29, 72, 0.18);
+}
+
+.heroCard--final::before {
+  content: "Final";
+  position: absolute;
+  top: 0.7rem;
+  right: -1.9rem;
+  z-index: 2;
+  width: 7rem;
+  padding: 0.22rem 0;
+  transform: rotate(35deg);
+  background: var(--final-red);
+  color: #ffffff;
+  font-size: 0.56rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
 .heroTop,
 .fixtureTop {
   position: relative;
@@ -484,7 +565,8 @@ h1 {
   font-weight: 900;
   letter-spacing: 0;
   line-height: 1.05;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: normal;
   text-transform: uppercase;
 }
 
@@ -651,30 +733,30 @@ h1 {
   border: 0;
   background: transparent;
   color: inherit;
-  padding: 1rem 3rem 1rem 1.2rem;
+  padding: 1rem 1.15rem 1rem 1.2rem;
   text-align: left;
   cursor: pointer;
 }
 
 .fixtureToggle::after {
-  content: "View";
+  content: "";
   position: absolute;
   right: 0.85rem;
   bottom: 0.85rem;
   display: grid;
   place-items: center;
-  width: auto;
-  min-width: 2.6rem;
-  min-height: 1.45rem;
-  padding: 0 0.45rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--titans-gold);
-  font-size: 0.58rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 900;
-  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,209,2,0.78)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='6'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.82rem 0.82rem;
 }
 
 .fixtureToggle:focus-visible {
@@ -910,8 +992,14 @@ h1 {
   position: absolute;
   top: 52%;
   z-index: 0;
-  width: clamp(9rem, 24vw, 12.5rem);
-  opacity: 0.09;
+  width: clamp(10.5rem, 27vw, 14rem);
+  height: clamp(10.5rem, 27vw, 14rem);
+  padding: 0.75rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent 68%);
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.12;
   transform: translateY(-50%);
   pointer-events: none;
   filter: grayscale(1) contrast(1.08) brightness(0.92);
@@ -988,12 +1076,13 @@ h1 {
   z-index: 1;
   display: inline-grid;
   place-items: center;
-  min-width: 5.6rem;
-  min-height: 4.2rem;
+  min-width: 4.8rem;
+  min-height: 3.5rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 8px;
   background: var(--titans-gold);
   color: #26241e;
-  font-size: 1.75rem;
+  font-size: 1.55rem;
   font-style: italic;
   font-weight: 900;
   line-height: 1;
@@ -1080,6 +1169,7 @@ h1 {
 
 .teamName {
   display: block;
+  text-wrap: balance;
 }
 
 .teamRole {
@@ -1121,11 +1211,25 @@ h1 {
   width: 0.34rem;
 }
 
+.fixtureTeams .team:last-child,
+.fixtureTeams .team:last-child .teamRole,
+.fixtureTeams .team:last-child .teamName {
+  text-align: right;
+}
+
+.fixtureTeams .team:last-child {
+  justify-self: end;
+}
+
 .fixtureCard--cup {
-  border-color: rgba(255, 209, 2, 0.28);
+  border-color: rgba(255, 209, 2, 0.44);
   background:
-    linear-gradient(135deg, rgba(255, 209, 2, 0.08), transparent 42%),
+    radial-gradient(circle at top right, rgba(255, 247, 173, 0.16), transparent 32%),
+    linear-gradient(135deg, rgba(255, 209, 2, 0.16), transparent 42%),
     var(--panel);
+  box-shadow:
+    0 0 0 1px rgba(255, 209, 2, 0.08),
+    0 12px 28px rgba(255, 209, 2, 0.12);
 }
 
 .fixtureCard--cup::before {
@@ -1133,10 +1237,14 @@ h1 {
 }
 
 .fixtureCard--plate {
-  border-color: rgba(203, 213, 225, 0.28);
+  border-color: rgba(203, 213, 225, 0.42);
   background:
-    linear-gradient(135deg, rgba(203, 213, 225, 0.1), transparent 42%),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.14), transparent 30%),
+    linear-gradient(135deg, rgba(203, 213, 225, 0.15), transparent 42%),
     var(--panel);
+  box-shadow:
+    0 0 0 1px rgba(203, 213, 225, 0.08),
+    0 12px 28px rgba(203, 213, 225, 0.1);
 }
 
 .fixtureCard--plate::before {
@@ -1144,11 +1252,16 @@ h1 {
 }
 
 .fixtureCard--shield {
-  border-color: rgba(205, 127, 50, 0.32);
+  border-color: rgba(205, 127, 50, 0.46);
   background:
-    linear-gradient(135deg, rgba(96, 165, 250, 0.08), transparent 30%),
-    linear-gradient(315deg, rgba(205, 127, 50, 0.1), transparent 44%),
+    radial-gradient(circle at top right, rgba(139, 211, 255, 0.12), transparent 30%),
+    linear-gradient(135deg, rgba(96, 165, 250, 0.14), transparent 30%),
+    linear-gradient(315deg, rgba(205, 127, 50, 0.18), transparent 44%),
     var(--panel);
+  box-shadow:
+    0 0 0 1px rgba(205, 127, 50, 0.08),
+    0 12px 28px rgba(96, 165, 250, 0.1),
+    0 12px 28px rgba(205, 127, 50, 0.1);
 }
 
 .fixtureCard--shield::before {
@@ -1156,8 +1269,14 @@ h1 {
 }
 
 .fixtureCard--final {
-  border-color: rgba(225, 29, 72, 0.42);
-  box-shadow: 0 0 0 1px rgba(255, 209, 2, 0.08), 0 12px 28px rgba(225, 29, 72, 0.12);
+  border-color: rgba(225, 29, 72, 0.58);
+  background:
+    radial-gradient(circle at top right, rgba(225, 29, 72, 0.18), transparent 28%),
+    linear-gradient(135deg, rgba(255, 209, 2, 0.12), transparent 36%),
+    var(--panel);
+  box-shadow:
+    0 0 0 1px rgba(255, 209, 2, 0.1),
+    0 12px 28px rgba(225, 29, 72, 0.18);
 }
 
 .fixtureCard--final::after,
@@ -1197,8 +1316,12 @@ h1 {
 
 .modalDialog--cup {
   background:
-    linear-gradient(135deg, rgba(255, 209, 2, 0.1), transparent 36%),
+    radial-gradient(circle at top right, rgba(255, 247, 173, 0.14), transparent 28%),
+    linear-gradient(135deg, rgba(255, 209, 2, 0.16), transparent 36%),
     var(--panel);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 209, 2, 0.08);
 }
 
 .modalDialog--cup::before {
@@ -1207,8 +1330,12 @@ h1 {
 
 .modalDialog--plate {
   background:
-    linear-gradient(135deg, rgba(203, 213, 225, 0.12), transparent 36%),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent 28%),
+    linear-gradient(135deg, rgba(203, 213, 225, 0.18), transparent 36%),
     var(--panel);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(203, 213, 225, 0.08);
 }
 
 .modalDialog--plate::before {
@@ -1217,9 +1344,13 @@ h1 {
 
 .modalDialog--shield {
   background:
-    linear-gradient(135deg, rgba(96, 165, 250, 0.1), transparent 32%),
-    linear-gradient(315deg, rgba(205, 127, 50, 0.12), transparent 42%),
+    radial-gradient(circle at top right, rgba(139, 211, 255, 0.12), transparent 28%),
+    linear-gradient(135deg, rgba(96, 165, 250, 0.15), transparent 32%),
+    linear-gradient(315deg, rgba(205, 127, 50, 0.18), transparent 42%),
     var(--panel);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(205, 127, 50, 0.08);
 }
 
 .modalDialog--shield::before {
@@ -1232,6 +1363,17 @@ h1 {
 
 .modalDialog--final::before {
   background: linear-gradient(180deg, var(--final-red), var(--titans-gold), #8f6500);
+}
+
+.modalDialog--final {
+  background:
+    radial-gradient(circle at top right, rgba(225, 29, 72, 0.18), transparent 24%),
+    linear-gradient(135deg, rgba(255, 209, 2, 0.14), transparent 36%),
+    var(--panel);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 209, 2, 0.08),
+    0 0 30px rgba(225, 29, 72, 0.12);
 }
 
 .modalPoster {
@@ -1250,10 +1392,14 @@ h1 {
 .modalWatermark {
   display: block;
   top: 60%;
-  width: clamp(11rem, 28vw, 15rem);
-  height: clamp(11rem, 28vw, 15rem);
+  width: clamp(12.5rem, 31vw, 16.75rem);
+  height: clamp(12.5rem, 31vw, 16.75rem);
+  padding: 0.9rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent 68%);
   object-fit: contain;
-  opacity: 0.15;
+  object-position: center;
+  opacity: 0.18;
   filter: grayscale(0.2) contrast(1.05) brightness(0.95);
 }
 
@@ -1459,6 +1605,12 @@ h1 {
 }
 
 @media (max-width: 680px) {
+  .teamFilter {
+    min-height: 2rem;
+    padding: 0.42rem 0.62rem;
+    font-size: 0.62rem;
+  }
+
   body {
     padding: 0.65rem;
   }
@@ -1503,6 +1655,11 @@ h1 {
     gap: 0.45rem;
   }
 
+  .fixtureTop {
+    flex-direction: row;
+    align-items: center;
+  }
+
   .heroLeague {
     text-align: left;
   }
@@ -1510,7 +1667,7 @@ h1 {
   .heroTeams,
   .fixtureTeams {
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    gap: 0.55rem;
+    gap: 0.42rem;
   }
 
   .heroTeam:last-child,
@@ -1518,14 +1675,56 @@ h1 {
     text-align: right;
   }
 
+  .fixtureTeams .team,
+  .fixtureTeams .team .teamRole,
+  .fixtureTeams .team .teamName,
+  .fixtureTeams .team:last-child,
+  .fixtureTeams .team:last-child .teamRole,
+  .fixtureTeams .team:last-child .teamName {
+    text-align: center;
+  }
+
+  .fixtureTeams .team,
+  .fixtureTeams .team:last-child {
+    justify-self: center;
+  }
+
+  .heroTeam,
+  .heroTeam:last-child,
+  .heroTeam .teamRole {
+    text-align: center;
+  }
+
+  .heroTeam,
+  .heroTeam:last-child {
+    justify-self: center;
+  }
+
   .heroVs,
   .score {
     justify-self: center;
-    min-width: 3.1rem;
+    min-width: 2.75rem;
+  }
+
+  .score {
+    min-height: 2.15rem;
+    padding: 0.42rem 0.45rem;
+    font-size: 0.88rem;
+  }
+
+  .sideTag {
+    min-height: 1.05rem;
+    padding: 0.1rem 0.32rem;
+    font-size: 0.48rem;
   }
 
   .fixtureMeta {
-    padding-right: 2rem;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .heroMeta {
+    justify-content: center;
   }
 
   .modalDialog {
@@ -1585,9 +1784,10 @@ h1 {
   }
 
   .modalWatermark {
-    width: 7rem;
-    height: 7rem;
-    opacity: 0.13;
+    width: 8rem;
+    height: 8rem;
+    padding: 0.55rem;
+    opacity: 0.16;
   }
 
   .modalWatermark--home {
@@ -1658,7 +1858,19 @@ h1 {
   }
 
   .team {
-    font-size: 0.92rem;
+    font-size: 0.74rem;
+    line-height: 0.96;
+  }
+
+  .teamName {
+    text-wrap: pretty;
+  }
+
+  .score {
+    min-width: 2.45rem;
+    min-height: 2rem;
+    padding: 0.36rem 0.36rem;
+    font-size: 0.8rem;
   }
 
   .modalClose {
@@ -1690,8 +1902,9 @@ h1 {
   }
 
   .modalWatermark {
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
+    padding: 0.45rem;
   }
 
   .modalWatermark--home {

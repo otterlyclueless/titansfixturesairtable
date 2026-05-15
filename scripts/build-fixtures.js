@@ -102,6 +102,7 @@ function cleanFixtures(fixtures, teams) {
       kickOff: fields["Kick Off"] || null,
       league: fields.League || "",
       competition: fields.Competition || fields.League || "",
+      matchType: fields["Match Type"] || "",
       season: fields.Season || "",
       status: fields.Status || "",
       result: fields.Result || "",

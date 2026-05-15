@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build:data",
     "build:data": "node scripts/build-fixtures.js",
     "check": "node --check public/app.js && node --check public/embed.js && node --check scripts/build-fixtures.js && node --check netlify/functions/fixtures.js",
     "test": "echo \"Error: no test specified\" && exit 1"
