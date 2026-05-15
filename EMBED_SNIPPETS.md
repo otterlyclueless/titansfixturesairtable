@@ -33,34 +33,31 @@ Use this when the Fixtures Centre has its own website page.
 ></script>
 ```
 
-## Members Events Example
+## Members Centre Example
 
-Use this for the members-facing version. It includes private events as well as public ones.
+Use this for the members-facing version. It uses the same interface as the public Fixtures Centre, but the Events tab includes private member events as well.
 
 ```html
-<div id="titans-members-events"></div>
+<div id="titans-members-centre"></div>
 <script
   src="https://fixtures.londontitans.com/embed.js"
-  data-target="#titans-members-events"
-  data-src="/members-events.html"
-  data-title="London Titans Member Events"
-  data-layout="panel"
-  data-height="860px"
-  data-min-height="720px"
+  data-target="#titans-members-centre"
+  data-src="/members.html"
+  data-title="London Titans Members Centre"
+  data-min-height="100vh"
 ></script>
 ```
 
-## Public Events Example
+## Public Fixtures Centre Example
 
-Use this for the public-facing version. Private events are automatically hidden.
+Use this for the public-facing version. The Events tab shows public events only.
 
 ```html
-<div id="titans-public-events"></div>
+<div id="titans-fixtures-widget"></div>
 <script
   src="https://fixtures.londontitans.com/embed.js"
-  data-target="#titans-public-events"
-  data-src="/events.html"
-  data-title="London Titans Events"
+  data-target="#titans-fixtures-widget"
+  data-title="London Titans Fixtures"
   data-min-height="100vh"
 ></script>
 ```
@@ -102,7 +99,6 @@ These can be passed as `data-*` attributes on the script embed:
 - `data-view="results"`
 - `data-view="all"`
 - `data-view="events"`
-- `data-audience="members"`
 - `data-team="Development"`
 - `data-team="Turner"`
 - `data-competition="LUL Division 1"`
