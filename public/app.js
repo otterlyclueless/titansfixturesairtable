@@ -6,6 +6,7 @@ let currentCompetition = "all";
 let currentSeason = "all";
 let currentStatus = "all";
 let lastFocusedElement = null;
+let expandedInlineCard = null;
 const TITANS_TEAM_PREFIX = "Titans ";
 
 async function loadFixtures() {
@@ -395,6 +396,7 @@ function createFixtureCard(fixture) {
   const card = document.createElement("article");
   card.className = `fixtureCard ${getCompetitionClasses(fixture)}`;
   card.dataset.competitionLabel = getCompetitionLabel(fixture);
+  const embedMode = isEmbedMode();
 
   const score =
     fixture.homeScore !== null && fixture.awayScore !== null
@@ -404,7 +406,11 @@ function createFixtureCard(fixture) {
   const smartStatus = getSmartStatus(fixture);
 
   card.innerHTML = `
-    <button class="fixtureToggle" type="button" aria-haspopup="dialog">
+    <button
+      class="fixtureToggle"
+      type="button"
+      ${embedMode ? 'aria-expanded="false"' : 'aria-haspopup="dialog"'}
+    >
       <div class="fixtureTop">
         <span class="league">${escapeHtml(getCompetition(fixture))}</span>
         <span class="result result--${smartStatus.className || smartStatus.key}">${escapeHtml(smartStatus.label)}</span>
@@ -426,15 +432,67 @@ function createFixtureCard(fixture) {
         <div>${formatKickOff(fixture.kickOff, "short")}</div>
       </div>
     </button>
+    <div class="fixtureInlineDetails" hidden></div>
   `;
 
   const toggle = card.querySelector(".fixtureToggle");
+  const inlineDetails = card.querySelector(".fixtureInlineDetails");
 
   toggle.addEventListener("click", () => {
+    if (embedMode) {
+      toggleInlineFixtureDetails(card, inlineDetails, fixture);
+      return;
+    }
+
     openFixtureModal(fixture);
   });
 
   return card;
+}
+
+function toggleInlineFixtureDetails(card, inlineDetails, fixture) {
+  const toggle = card.querySelector(".fixtureToggle");
+  const isOpen = !inlineDetails.hidden;
+
+  if (expandedInlineCard && expandedInlineCard !== card) {
+    collapseInlineFixtureDetails(expandedInlineCard);
+  }
+
+  if (isOpen) {
+    collapseInlineFixtureDetails(card);
+    return;
+  }
+
+  inlineDetails.innerHTML = createFixtureDetailMarkup(fixture, true);
+  inlineDetails.hidden = false;
+  card.classList.add("isExpanded");
+  toggle.setAttribute("aria-expanded", "true");
+  expandedInlineCard = card;
+
+  requestAnimationFrame(() => {
+    card.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    postEmbedHeight();
+  });
+}
+
+function collapseInlineFixtureDetails(card) {
+  const inlineDetails = card.querySelector(".fixtureInlineDetails");
+  const toggle = card.querySelector(".fixtureToggle");
+
+  if (!inlineDetails) {
+    return;
+  }
+
+  inlineDetails.hidden = true;
+  inlineDetails.innerHTML = "";
+  card.classList.remove("isExpanded");
+  toggle?.setAttribute("aria-expanded", "false");
+
+  if (expandedInlineCard === card) {
+    expandedInlineCard = null;
+  }
+
+  postEmbedHeight();
 }
 
 function openFixtureModal(fixture) {
@@ -443,22 +501,46 @@ function openFixtureModal(fixture) {
   const closeButton = modal.querySelector(".modalClose");
   const smartStatus = getSmartStatus(fixture);
   const modalClass = `modalDialog ${getCompetitionClasses(fixture).replaceAll("fixtureCard", "modalDialog")} modalDialog--${smartStatus.className || smartStatus.key}`;
+
+  lastFocusedElement = document.activeElement;
+  modal.querySelector(".modalDialog").className = modalClass;
+  modal.querySelector(".modalDialog").dataset.competitionLabel = getCompetitionLabel(fixture);
+  modalContent.innerHTML = createFixtureDetailMarkup(fixture);
+
+  modal.hidden = false;
+  document.body.classList.add("hasModal");
+  closeButton.focus();
+}
+
+function closeFixtureModal() {
+  const modal = document.getElementById("fixtureModal");
+
+  modal.hidden = true;
+  document.body.classList.remove("hasModal");
+
+  if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+    lastFocusedElement.focus();
+  }
+}
+
+function createFixtureDetailMarkup(fixture, inline = false) {
+  const smartStatus = getSmartStatus(fixture);
   const homeLogoUrl = getTeamLogoUrl(fixture.homeTeam);
   const awayLogoUrl = getTeamLogoUrl(fixture.awayTeam);
   const score =
     fixture.homeScore !== null && fixture.awayScore !== null
       ? `${fixture.homeScore} - ${fixture.awayScore}`
       : "vs";
+  const posterClass = inline ? "modalPoster fixtureInlinePoster" : "modalPoster";
+  const detailsClass = inline ? "modalDetails fixtureInlineBody" : "modalDetails";
+  const titleId = inline ? "" : ' id="modalTitle"';
 
-  lastFocusedElement = document.activeElement;
-  modal.querySelector(".modalDialog").className = modalClass;
-  modal.querySelector(".modalDialog").dataset.competitionLabel = getCompetitionLabel(fixture);
-  modalContent.innerHTML = `
-    <div class="modalPoster">
+  return `
+    <div class="${posterClass}">
       ${homeLogoUrl ? `<img class="modalWatermark modalWatermark--home" src="${escapeAttribute(homeLogoUrl)}" alt="" aria-hidden="true" />` : ""}
       ${awayLogoUrl ? `<img class="modalWatermark modalWatermark--away" src="${escapeAttribute(awayLogoUrl)}" alt="" aria-hidden="true" />` : ""}
 
-      <div class="modalTeams" id="modalTitle">
+      <div class="modalTeams"${titleId}>
         <div class="modalTeam ${getTitansSideClass(fixture, "home")}">
           <span class="teamRole"><span class="sideTag sideTag--home">Home</span></span>
           <span class="teamName">${escapeHtml(fixture.homeTeam?.name || "Unknown")}</span>
@@ -480,27 +562,12 @@ function openFixtureModal(fixture) {
       </div>
     </div>
 
-    <div class="modalDetails">
+    <div class="${detailsClass}">
       ${createOptionalDetailRow("Goal scorers", fixture.goalScorers)}
       ${createOptionalDetailRow("Notes", fixture.notes)}
       ${createVenueRow(fixture.location)}
     </div>
   `;
-
-  modal.hidden = false;
-  document.body.classList.add("hasModal");
-  closeButton.focus();
-}
-
-function closeFixtureModal() {
-  const modal = document.getElementById("fixtureModal");
-
-  modal.hidden = true;
-  document.body.classList.remove("hasModal");
-
-  if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
-    lastFocusedElement.focus();
-  }
 }
 
 function createNextFixtureMarkup(label, fixture) {

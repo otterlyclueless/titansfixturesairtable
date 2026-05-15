@@ -1,6 +1,10 @@
 const { mkdir, writeFile } = require("node:fs/promises");
 const path = require("node:path");
 
+if (typeof process.loadEnvFile === "function") {
+  process.loadEnvFile();
+}
+
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
 const FIXTURES_TABLE_ID = process.env.AIRTABLE_FIXTURES_TABLE_ID;

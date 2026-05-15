@@ -1,0 +1,1230 @@
+[
+  {
+    "id": "rec0VhVWtfPE9OjU8",
+    "match": "Titans Two Brewers vs. Millwall Romans",
+    "homeTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recGkNc3tqM5XuvCN",
+      "name": "Millwall Romans",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/sFKIaGfkii8_mXEWYIAJqA/HR0HEs33Rj2Sn0tOJNEs0tkKJOWgjTp_5cCP8qvYt-j8fxFLJOB2L_l3W5BCKdl84biZGu9ep5p10KukM4RK9ipSGoweDzh_o7xeb49wVKChdwYFjyCkSIDR6Glkq4gtOccNei9Dy-QajE0Etobrhw/-NUrwqPFBVK0RdpSucIKD1qsd442haM4wLNuPlZSmMo"
+    },
+    "homeScore": 3,
+    "awayScore": 7,
+    "kickOff": "2025-09-28T13:00:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "",
+    "goalScorers": "Jonathan S, Johnny P, Berkan B"
+  },
+  {
+    "id": "rec1teImzWvrMZBnb",
+    "match": "Birmingham Blaze vs. Titans Wheeler",
+    "homeTeam": {
+      "id": "recsFChDDgpTNCSSs",
+      "name": "Birmingham Blaze",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/1YLcIIthyWL3pW4SiUgzyg/t1KmWHx_z9jmmfX1lvKNAY5HuoczHFW8fYn37S9t1cebi5AM5pH33fF_L57nOoC-vKkm7NzI0thRMe6iWrYayoshETz5tCnmx5xLTM-0uNzZZh2eUrPFnquN712eTVR1O5zdKkZeqC_unyCIiy1prg/gC-AGYb7fNlNWRObT0tt4fH7SVxkhYGv3qtUxtgfyhI"
+    },
+    "awayTeam": {
+      "id": "recB5l1ww2BHQmZav",
+      "name": "Titans Wheeler",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 3,
+    "awayScore": 0,
+    "kickOff": "2025-11-29T00:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "rec2PGjHUOQixf3kK",
+    "match": "Titans Two Brewers vs. Stokey FC",
+    "homeTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recoojeW7jy77EK9P",
+      "name": "Stokey FC",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/ed0Sxz30qW0ghF7EyBitOw/tEpSfc6zXOQiDDlyvd3Ydv8Ohn5KTeexFGNq0TlWgyVVKoQIyPOgyAx_f8IfhB_VLVrbZctHabLX9XXzjD_yXpjz2eP8IjZKquKWt8UJHcDOEgzftvN7U93W3JORryrlyPCDpQ9dRVMcPwwLXKPt3w/Ss81V7vc1EnpgMfSxAocaw_dhL-PDJ-BSJDSAqWVYcU"
+    },
+    "homeScore": 6,
+    "awayScore": 7,
+    "kickOff": "2026-01-18T14:00:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "",
+    "goalScorers": "Caolan C, Adam H, Tray R, James B, Elliot T, Oscar BP"
+  },
+  {
+    "id": "rec6vkoab6dfbZyST",
+    "match": "Trowbridge Tigers vs. Titans Wheeler",
+    "homeTeam": {
+      "id": "recbwxtgyjyjqqiqI",
+      "name": "Trowbridge Tigers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/bv1wVruBeJTg-viAv-6Gpg/LooqOHTYhkxwlprCDHPBXQGSgCKkf_HtfsDpm-6xDEU7_CK1MIsLQaKX1dg1oxc2WJO8um-ophKHps6w03RkG9ZLn0EETjOxh0cIca5Ks0J0r4hZbidL6cXOyjMy47N5Kx5cJRmSUbEqQAP-63pHdQ/KVBKLQ82CCFDRL15_6m-jzi6QYEzyJDUrjCerdmUpdw"
+    },
+    "awayTeam": {
+      "id": "recB5l1ww2BHQmZav",
+      "name": "Titans Wheeler",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 3,
+    "awayScore": 0,
+    "kickOff": "2026-03-21T00:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "rec7aaTunclobGyE5",
+    "match": "Titans Wheeler vs. Leftfooters",
+    "homeTeam": {
+      "id": "recB5l1ww2BHQmZav",
+      "name": "Titans Wheeler",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recSiIByZTov1fue5",
+      "name": "Leftfooters",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/vVrmEHVsEOkqcMEsEfax0Q/4MoFWHtFDc0SyGTQD8W-1HtRQUP5N4DZby_qGBhme6HZH5Jq_W2otnNX0XN2_gIAf5PsyPSX5kETb1tUNq8ew4oKgZqKmq22og_AC3k2upSafRxivpsFrSKy6o89kLRGDr1qxRKh0YnUOZVYMudlOg/qlhgyPN3hmB9vp6NRaTiJCYpbYp3mX9jhRWgnW7kBqE"
+    },
+    "homeScore": 3,
+    "awayScore": 1,
+    "kickOff": "2026-04-10T23:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "rec7sz4Za7t7PThSd",
+    "match": "Stonewall Unity vs. Titans Two Brewers",
+    "homeTeam": {
+      "id": "rec56QEsEAiwve92S",
+      "name": "Stonewall Unity",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/TWF4QY9KCaU9ZwgW1ZtzDg/u4E0GWonPXwArq5la-SM-amE3kaa2_ZumvIxHcM28bhMnXofK6dtYL2HDn_O192vCtO541m5_-Q3rtyGeAiq0HqZ3KI4RFldpo0Oj6vZHVZ0C7oimaVi1oqAsLJh_U6Xe4p7mYVtx4MsCeRPMkEzMw/MBbTA0qt50b_rJLNRkYsAPN7JR-7crmim5VVSzHk8oA"
+    },
+    "awayTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 2,
+    "awayScore": 0,
+    "kickOff": "2025-11-23T14:00:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "Memorial Recreation Ground, E15 3AH",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "rec87PYkhNstI8EXZ",
+    "match": "Titans LGBT Hero vs. London Freedom",
+    "homeTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "reclSto6PjPpy8lDW",
+      "name": "London Freedom",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/Q8ytlCpXWlUFQ_TXssYDPg/fRRJE2A2gAPd9wYaF2tkJ86ct_uYKnbvzVPB9V6_aWDoUzFGnuJCRY2BtwIvs8GeWYwDvoXH7413E5ziQ37rQFHbMWo7nGa_ATQQdHVczQ69ZzZ21GFpbO4xH3ATMLJ0hqVuVy0-TCHazaSbGUcPQQ/6Bil7FOzAovCmVK-PpUuQ-_NMHcXQJdLXrwb_kuBvz0"
+    },
+    "homeScore": 8,
+    "awayScore": 1,
+    "kickOff": "2025-10-26T14:00:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "",
+    "goalScorers": "Aaron S (2), Chris B (2), David WH, James A, Michael B, Luke A"
+  },
+  {
+    "id": "recC9vvjKNruoHs38",
+    "match": "Titans LGBT Hero vs. London Freedom",
+    "homeTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "reclSto6PjPpy8lDW",
+      "name": "London Freedom",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/Q8ytlCpXWlUFQ_TXssYDPg/fRRJE2A2gAPd9wYaF2tkJ86ct_uYKnbvzVPB9V6_aWDoUzFGnuJCRY2BtwIvs8GeWYwDvoXH7413E5ziQ37rQFHbMWo7nGa_ATQQdHVczQ69ZzZ21GFpbO4xH3ATMLJ0hqVuVy0-TCHazaSbGUcPQQ/6Bil7FOzAovCmVK-PpUuQ-_NMHcXQJdLXrwb_kuBvz0"
+    },
+    "homeScore": 4,
+    "awayScore": 1,
+    "kickOff": "2025-09-14T13:00:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "Titans cards: Ciaran M [S45]",
+    "goalScorers": "Aaron S, Tom F, Chris B, Adam B"
+  },
+  {
+    "id": "recD1PAyg8MgwIIwK",
+    "match": "Brighton BLAGGS vs. Titans Turner",
+    "homeTeam": {
+      "id": "recK6tCSaNjeQtY01",
+      "name": "Brighton BLAGGS",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/UBhgTb2ZqcFxLxf3yvAAUw/W89bJflH8UMuMG48O7zPPCEvnGnP1fw9hQG-cGuuI6ft03MTCqypI5P445AxSkdy6Bo5aiIjmk7W9yHl487RKsC0S08Rnpvd7u1YG522Fk6ayuirDyJsUNXbmY_YfUXKosH7YoavjaiT4DuRtv_o5w/h-8PNjPt9YYE_Wxup60c62rVH7Aokbat5SRtohE27ps"
+    },
+    "awayTeam": {
+      "id": "recUNLEWqvgh2u11R",
+      "name": "Titans Turner",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 3,
+    "awayScore": 4,
+    "kickOff": "2025-11-01T00:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recDGLzUDoj9FrFEB",
+    "match": "Titans LGBT Hero vs. Soho Tigers",
+    "homeTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "reci6lW1FnPzllpiM",
+      "name": "Soho Tigers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/J3S3ZJhZdF7_v8pWh9sBfA/fLdaRAsdBWbKF4fIoMi9F8SwTf9dS7O7-pnMWa0g8P1SL0Uoztxhmkdy7zO44u9COjoZKU5bdEc8A5F-9Khm6xoILw8Qp2DM60OfARRsXlm_HAml6gNNIWDqKsCdKBCvjRg3f9foRKDz2bgFcDNSpg/HwRMsVFMu83_05E-lGIawkgc1C96sY4wYGAxx18jyJw"
+    },
+    "homeScore": 4,
+    "awayScore": 2,
+    "kickOff": "2026-01-11T13:00:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "",
+    "goalScorers": "David WH (2), Oliver S, Jordan E"
+  },
+  {
+    "id": "recF8p7mVkv5KTrqI",
+    "match": "Titans LGBT Hero vs. East End Phoenix",
+    "homeTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recBS8GVUhsQoN9rD",
+      "name": "East End Phoenix",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/KzT3BNU8s2t9S8e7ZJpdRA/OmYLOOgFnHa6wyPuUrebj9L0wMgHbfY1W9DAhxY0BZBQwAtL4s0nG5eY6cL-X3YGo5CJwjAAocnrvuBnIUX7Ek88NO1B8CN4JUhDXdp7VVaB9KmtqFEjHPRAOthzR_GudjQXeGjFtgcKPJAjpQWLUA/biliD87c5NgFlxWagx2M_nIl6DF_padL2BQLDsIbx6k"
+    },
+    "homeScore": 1,
+    "awayScore": 3,
+    "kickOff": "2026-03-01T14:00:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "",
+    "goalScorers": "David WH"
+  },
+  {
+    "id": "recJW8iGUHBfEeTsx",
+    "match": "Millwall Romans vs. Titans Two Brewers",
+    "homeTeam": {
+      "id": "recGkNc3tqM5XuvCN",
+      "name": "Millwall Romans",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/sFKIaGfkii8_mXEWYIAJqA/HR0HEs33Rj2Sn0tOJNEs0tkKJOWgjTp_5cCP8qvYt-j8fxFLJOB2L_l3W5BCKdl84biZGu9ep5p10KukM4RK9ipSGoweDzh_o7xeb49wVKChdwYFjyCkSIDR6Glkq4gtOccNei9Dy-QajE0Etobrhw/-NUrwqPFBVK0RdpSucIKD1qsd442haM4wLNuPlZSmMo"
+    },
+    "awayTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 7,
+    "awayScore": 3,
+    "kickOff": "2026-02-22T14:00:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "St Paul's Sports Ground, SE16 5EF",
+    "notes": "Titans cards: Ed G [YC] | Originally 15th Feb, moved to 22nd Feb",
+    "goalScorers": "Aaron S (2), Oscar BP"
+  },
+  {
+    "id": "recJggz3xXg71Z5dH",
+    "match": "Titans Two Brewers vs. Stonewall Unity",
+    "homeTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "rec56QEsEAiwve92S",
+      "name": "Stonewall Unity",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/TWF4QY9KCaU9ZwgW1ZtzDg/u4E0GWonPXwArq5la-SM-amE3kaa2_ZumvIxHcM28bhMnXofK6dtYL2HDn_O192vCtO541m5_-Q3rtyGeAiq0HqZ3KI4RFldpo0Oj6vZHVZ0C7oimaVi1oqAsLJh_U6Xe4p7mYVtx4MsCeRPMkEzMw/MBbTA0qt50b_rJLNRkYsAPN7JR-7crmim5VVSzHk8oA"
+    },
+    "homeScore": 2,
+    "awayScore": 3,
+    "kickOff": "2026-03-08T14:00:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "Titans cards: Jack A [YC] | Originally scheduled for Sunday 22 March",
+    "goalScorers": "James B, Oscar BP"
+  },
+  {
+    "id": "recLNv0vIDABr7U7K",
+    "match": "Cardiff Dragons vs. Titans Turner",
+    "homeTeam": {
+      "id": "recgHDHKtb8Xy8rDU",
+      "name": "Cardiff Dragons",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/I9WiSlen_hKJQZ3EDIg-CA/9MsFEGUll1zcx-60N7zVbIqUmELcA2uxU8XMMf-_xS_VrLqvBtu6DK28Z2z5J-IfDX2wJU9CFKaYjZ2FyXiddyyeYpImx-zchk2zP9f2LtsJDV2i4-bN-bDYHblyagcvPMyOEDi-89htMcrTxDeubw/8gRXA4OQ2tCprhpsmMaL8uAAd6QoOu8qALXAOexf7i8"
+    },
+    "awayTeam": {
+      "id": "recUNLEWqvgh2u11R",
+      "name": "Titans Turner",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 9,
+    "awayScore": 4,
+    "kickOff": "2026-04-24T23:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recMojqsSw9TtXfTO",
+    "match": "Titans Wheeler vs. Cardiff Dragons",
+    "homeTeam": {
+      "id": "recB5l1ww2BHQmZav",
+      "name": "Titans Wheeler",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recgHDHKtb8Xy8rDU",
+      "name": "Cardiff Dragons",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/I9WiSlen_hKJQZ3EDIg-CA/9MsFEGUll1zcx-60N7zVbIqUmELcA2uxU8XMMf-_xS_VrLqvBtu6DK28Z2z5J-IfDX2wJU9CFKaYjZ2FyXiddyyeYpImx-zchk2zP9f2LtsJDV2i4-bN-bDYHblyagcvPMyOEDi-89htMcrTxDeubw/8gRXA4OQ2tCprhpsmMaL8uAAd6QoOu8qALXAOexf7i8"
+    },
+    "homeScore": 1,
+    "awayScore": 1,
+    "kickOff": "2025-11-01T00:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Draw",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recNzexeV9E1qIU2J",
+    "match": "Titans Two Brewers vs. Charlton Valiants",
+    "homeTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "reccUHCrAoTUu9m0Z",
+      "name": "Charlton Valiants",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/RLpai46ZQsIEDPkdZkbFww/UGi_T-tD_lDbb91kiHTGzTHtWVisC_ye_ITWM9NVX1we435cVOJvu-8kvrQlBIY7IHTfRB9Lu7QBDEceqaQsJ3OI-njsTcQ1wzpUeyf-skIS19wSQ1h0LaPF-cdXkOlHQneOPGAwKWJ-CWGlUASSZw/REM9RyCdRJSXbsGuauZ3oztePfQDU7tW41Qb3YlD_zs"
+    },
+    "homeScore": 2,
+    "awayScore": 5,
+    "kickOff": "2026-05-03T13:00:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "Originally scheduled for Easter Sunday",
+    "goalScorers": ""
+  },
+  {
+    "id": "recO9prdpzItB3PTe",
+    "match": "Nottingham Lions vs. Titans Turner",
+    "homeTeam": {
+      "id": "recw70kS3zTp5gSCX",
+      "name": "Nottingham Lions",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/ata05vCclQpqvQg9a51WWw/aUuSt7IuBlUXWm69jJyj19erCyzz-UGVqEjB1Ab4quyIocy2sDOxII_mQzq7yuVDnUbbCZLU3Aq7IxvwCbQu1dDcwRTv2xK8t5R7A3cuH5OSku54bhlOKpfbAQR5XDN50ixxYXHD1urvJOGRc2uPcg/XF4Skd4YqSnCiK_tYarZ3IOKFSne7gmXSBPiTqhsiF8"
+    },
+    "awayTeam": {
+      "id": "recUNLEWqvgh2u11R",
+      "name": "Titans Turner",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 4,
+    "awayScore": 1,
+    "kickOff": "2026-04-10T23:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recPNdw1eoe1mHezO",
+    "match": "Soho Tigers vs. Titans LGBT Hero",
+    "homeTeam": {
+      "id": "reci6lW1FnPzllpiM",
+      "name": "Soho Tigers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/J3S3ZJhZdF7_v8pWh9sBfA/fLdaRAsdBWbKF4fIoMi9F8SwTf9dS7O7-pnMWa0g8P1SL0Uoztxhmkdy7zO44u9COjoZKU5bdEc8A5F-9Khm6xoILw8Qp2DM60OfARRsXlm_HAml6gNNIWDqKsCdKBCvjRg3f9foRKDz2bgFcDNSpg/HwRMsVFMu83_05E-lGIawkgc1C96sY4wYGAxx18jyJw"
+    },
+    "awayTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 5,
+    "awayScore": 2,
+    "kickOff": "2026-05-03T13:00:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "Memorial Recreation Ground, E15 3AH",
+    "notes": "Originally scheduled for Sunday 10 May",
+    "goalScorers": ""
+  },
+  {
+    "id": "recRgIuT4sBGuF7yj",
+    "match": "Titans Turner vs. East End Phoenix",
+    "homeTeam": {
+      "id": "recUNLEWqvgh2u11R",
+      "name": "Titans Turner",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recBS8GVUhsQoN9rD",
+      "name": "East End Phoenix",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/KzT3BNU8s2t9S8e7ZJpdRA/OmYLOOgFnHa6wyPuUrebj9L0wMgHbfY1W9DAhxY0BZBQwAtL4s0nG5eY6cL-X3YGo5CJwjAAocnrvuBnIUX7Ek88NO1B8CN4JUhDXdp7VVaB9KmtqFEjHPRAOthzR_GudjQXeGjFtgcKPJAjpQWLUA/biliD87c5NgFlxWagx2M_nIl6DF_padL2BQLDsIbx6k"
+    },
+    "homeScore": 3,
+    "awayScore": 5,
+    "kickOff": "2025-11-29T00:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recVPtRsjQS9OL4KA",
+    "match": "London Falcons vs. Titans Two Brewers",
+    "homeTeam": {
+      "id": "recAwRyDVKZ9ntHPO",
+      "name": "London Falcons",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/_VeL8Vuex1N2Okrh3zGyBg/Egn8Wf4NU7Dptwq-Dth_0T0jPzQvKBFJRliY0Nz1sso1hHSLgxeBtbkiS3ZTRhJBlkHgNcaSolVlG7-3asRHSVZ9DIpq5p3Vv1oOrFyqpBUsw-arsmm8NEuR5_MTQg1wEmUoevXxHAzKm5Ac9RWPZA/2T76P2o2Hw6WGL83Ge8tRe7EC_vxgVcKCQpUPPxxLCI"
+    },
+    "awayTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 2,
+    "awayScore": 1,
+    "kickOff": "2025-11-15T13:45:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "Burgess Park, London",
+    "notes": "",
+    "goalScorers": "Tray R"
+  },
+  {
+    "id": "recVTB0pmmZ9pK2zF",
+    "match": "Soho FC vs. Titans Two Brewers",
+    "homeTeam": {
+      "id": "recqAw1eSDgGLdx5E",
+      "name": "Soho FC",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/DsIyGddFuAwjnhvRSNAhGw/fVD5iwbX344KT1a-ZD8BoRs409pDsE9qVZiQDQWvG3Jzfkups-tNv6oqUC6ChiF-i9dReyPjO87C9IazCO0ruu-qJQbBzOf262xRDmwdIBpa8HU7tPuLvzhLkoTCGlS9aEDuX3rENF1neNXdm3Rs7Q/av8Kxygv16Dm-ahAOpa6KppBNJtocDKOqNlAcKJc2fg"
+    },
+    "awayTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 0,
+    "awayScore": 6,
+    "kickOff": "2026-01-11T14:30:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "Memorial Recreation Ground, E15 3AH",
+    "notes": "",
+    "goalScorers": "Kev L, Joe R, James B, Oscar BP (2), Ollie JP"
+  },
+  {
+    "id": "recWGvDNb3qLSzlZZ",
+    "match": "Soho FC vs. Titans Wheeler",
+    "homeTeam": {
+      "id": "recqAw1eSDgGLdx5E",
+      "name": "Soho FC",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/DsIyGddFuAwjnhvRSNAhGw/fVD5iwbX344KT1a-ZD8BoRs409pDsE9qVZiQDQWvG3Jzfkups-tNv6oqUC6ChiF-i9dReyPjO87C9IazCO0ruu-qJQbBzOf262xRDmwdIBpa8HU7tPuLvzhLkoTCGlS9aEDuX3rENF1neNXdm3Rs7Q/av8Kxygv16Dm-ahAOpa6KppBNJtocDKOqNlAcKJc2fg"
+    },
+    "awayTeam": {
+      "id": "recB5l1ww2BHQmZav",
+      "name": "Titans Wheeler",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 0,
+    "awayScore": 2,
+    "kickOff": "2026-02-07T00:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recWztFdgiSP7dsO9",
+    "match": "Leftfooters vs. Titans Turner",
+    "homeTeam": {
+      "id": "recSiIByZTov1fue5",
+      "name": "Leftfooters",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/vVrmEHVsEOkqcMEsEfax0Q/4MoFWHtFDc0SyGTQD8W-1HtRQUP5N4DZby_qGBhme6HZH5Jq_W2otnNX0XN2_gIAf5PsyPSX5kETb1tUNq8ew4oKgZqKmq22og_AC3k2upSafRxivpsFrSKy6o89kLRGDr1qxRKh0YnUOZVYMudlOg/qlhgyPN3hmB9vp6NRaTiJCYpbYp3mX9jhRWgnW7kBqE"
+    },
+    "awayTeam": {
+      "id": "recUNLEWqvgh2u11R",
+      "name": "Titans Turner",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 0,
+    "awayScore": 8,
+    "kickOff": "2026-02-07T00:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recZJZoGFjTCowdTI",
+    "match": "Millwall Pride vs. Titans LGBT Hero",
+    "homeTeam": {
+      "id": "recnrN99TCuBeklqI",
+      "name": "Millwall Pride",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/YqaOdBLpuXJWwq69kjtaVA/uXBTGvb6PWuv3J07czH7T-3uNssl8VsCawvji1s76dxVCvsuuxIWjGxRwg554ilJH95lpqmauvcKH1MpOjmgPsY95xv8UXGn2hcvHJ0fXJ2vcp9Z-roNHCnbg4-aavHNOOpIyVg_HJKQ-C44shAorw/pnfCmZZIM0kCmwkpYmxLV2P9o5v3f82T5KvoKrFidVI"
+    },
+    "awayTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 6,
+    "awayScore": 0,
+    "kickOff": "2025-09-28T13:00:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "St Paul's Sports Ground, SE16 5EF",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "reca6adbq3z5G6XGr",
+    "match": "East End Phoenix vs. Titans LGBT Hero",
+    "homeTeam": {
+      "id": "recBS8GVUhsQoN9rD",
+      "name": "East End Phoenix",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/KzT3BNU8s2t9S8e7ZJpdRA/OmYLOOgFnHa6wyPuUrebj9L0wMgHbfY1W9DAhxY0BZBQwAtL4s0nG5eY6cL-X3YGo5CJwjAAocnrvuBnIUX7Ek88NO1B8CN4JUhDXdp7VVaB9KmtqFEjHPRAOthzR_GudjQXeGjFtgcKPJAjpQWLUA/biliD87c5NgFlxWagx2M_nIl6DF_padL2BQLDsIbx6k"
+    },
+    "awayTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 1,
+    "awayScore": 3,
+    "kickOff": "2026-03-29T11:00:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "Memorial Recreation Ground, E15 3AH",
+    "notes": "Originally scheduled for Sunday 05 April",
+    "goalScorers": "Oliver S (2), James A"
+  },
+  {
+    "id": "recaMUBij68L49OdI",
+    "match": "Titans LGBT Hero vs. Barnes Stormers",
+    "homeTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recUCpT4zUCiyr7NA",
+      "name": "Barnes Stormers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/_MVQTOWPImCv_1L6BaBpbA/xUXFsFjTF52nDYw2HjNzpgQrpLuu_JRAxPNO4SoNHP-zBK25WfWc-HLKEmaYRp7H9qbnfE4oZL6O0qKoOCWGpUlyp9-JBOFjCH8V59X1o3B38WIsP7dboiZoRQzz5Ukgno3jrRg5NraRYXWrl3Fs9Q/3fNnyQDu19Ess_n2J774lIDPBTQrz6cJhtU2oi4no9w"
+    },
+    "homeScore": 1,
+    "awayScore": 1,
+    "kickOff": "2026-04-19T13:00:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Draw",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "",
+    "goalScorers": "TJ F"
+  },
+  {
+    "id": "recaPCL06JtGrmwfD",
+    "match": "Titans Turner vs. Soho FC",
+    "homeTeam": {
+      "id": "recUNLEWqvgh2u11R",
+      "name": "Titans Turner",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recqAw1eSDgGLdx5E",
+      "name": "Soho FC",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/DsIyGddFuAwjnhvRSNAhGw/fVD5iwbX344KT1a-ZD8BoRs409pDsE9qVZiQDQWvG3Jzfkups-tNv6oqUC6ChiF-i9dReyPjO87C9IazCO0ruu-qJQbBzOf262xRDmwdIBpa8HU7tPuLvzhLkoTCGlS9aEDuX3rENF1neNXdm3Rs7Q/av8Kxygv16Dm-ahAOpa6KppBNJtocDKOqNlAcKJc2fg"
+    },
+    "homeScore": 2,
+    "awayScore": 1,
+    "kickOff": "2026-03-21T00:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recbTP1IlNv5h7lzQ",
+    "match": "Titans LGBT Hero vs. Millwall Pride",
+    "homeTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recnrN99TCuBeklqI",
+      "name": "Millwall Pride",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/YqaOdBLpuXJWwq69kjtaVA/uXBTGvb6PWuv3J07czH7T-3uNssl8VsCawvji1s76dxVCvsuuxIWjGxRwg554ilJH95lpqmauvcKH1MpOjmgPsY95xv8UXGn2hcvHJ0fXJ2vcp9Z-roNHCnbg4-aavHNOOpIyVg_HJKQ-C44shAorw/pnfCmZZIM0kCmwkpYmxLV2P9o5v3f82T5KvoKrFidVI"
+    },
+    "homeScore": 0,
+    "awayScore": 5,
+    "kickOff": "2026-02-15T13:00:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recdP2m1tCfWnVZDL",
+    "match": "Titans Wheeler vs. Brighton BLAGGS",
+    "homeTeam": {
+      "id": "recB5l1ww2BHQmZav",
+      "name": "Titans Wheeler",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recK6tCSaNjeQtY01",
+      "name": "Brighton BLAGGS",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/UBhgTb2ZqcFxLxf3yvAAUw/W89bJflH8UMuMG48O7zPPCEvnGnP1fw9hQG-cGuuI6ft03MTCqypI5P445AxSkdy6Bo5aiIjmk7W9yHl487RKsC0S08Rnpvd7u1YG522Fk6ayuirDyJsUNXbmY_YfUXKosH7YoavjaiT4DuRtv_o5w/h-8PNjPt9YYE_Wxup60c62rVH7Aokbat5SRtohE27ps"
+    },
+    "homeScore": 0,
+    "awayScore": 1,
+    "kickOff": "2026-02-21T00:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recdi3UgG2xEpiTif",
+    "match": "Titans Two Brewers vs. East End Phoenix",
+    "homeTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recBS8GVUhsQoN9rD",
+      "name": "East End Phoenix",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/KzT3BNU8s2t9S8e7ZJpdRA/OmYLOOgFnHa6wyPuUrebj9L0wMgHbfY1W9DAhxY0BZBQwAtL4s0nG5eY6cL-X3YGo5CJwjAAocnrvuBnIUX7Ek88NO1B8CN4JUhDXdp7VVaB9KmtqFEjHPRAOthzR_GudjQXeGjFtgcKPJAjpQWLUA/biliD87c5NgFlxWagx2M_nIl6DF_padL2BQLDsIbx6k"
+    },
+    "homeScore": null,
+    "awayScore": null,
+    "kickOff": "2026-05-24T13:00:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": [
+      "Final",
+      "Plate"
+    ],
+    "season": "",
+    "status": "",
+    "result": "",
+    "location": "Coles Park Stadium, White Hart Ln, London N17 7JP",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "rechowSIMkMyr3MzE",
+    "match": "Stokey FC vs. Titans Two Brewers",
+    "homeTeam": {
+      "id": "recoojeW7jy77EK9P",
+      "name": "Stokey FC",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/ed0Sxz30qW0ghF7EyBitOw/tEpSfc6zXOQiDDlyvd3Ydv8Ohn5KTeexFGNq0TlWgyVVKoQIyPOgyAx_f8IfhB_VLVrbZctHabLX9XXzjD_yXpjz2eP8IjZKquKWt8UJHcDOEgzftvN7U93W3JORryrlyPCDpQ9dRVMcPwwLXKPt3w/Ss81V7vc1EnpgMfSxAocaw_dhL-PDJ-BSJDSAqWVYcU"
+    },
+    "awayTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 1,
+    "awayScore": 2,
+    "kickOff": "2025-09-14T12:00:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "Douglas Eyre Sports Centre, Coppermill Lane, London, E17 7HE",
+    "notes": "",
+    "goalScorers": "Kev L, Caolan C"
+  },
+  {
+    "id": "reci9VHvCgBZ8nrb8",
+    "match": "Charlton Valiants vs. Titans Two Brewers",
+    "homeTeam": {
+      "id": "reccUHCrAoTUu9m0Z",
+      "name": "Charlton Valiants",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/RLpai46ZQsIEDPkdZkbFww/UGi_T-tD_lDbb91kiHTGzTHtWVisC_ye_ITWM9NVX1we435cVOJvu-8kvrQlBIY7IHTfRB9Lu7QBDEceqaQsJ3OI-njsTcQ1wzpUeyf-skIS19wSQ1h0LaPF-cdXkOlHQneOPGAwKWJ-CWGlUASSZw/REM9RyCdRJSXbsGuauZ3oztePfQDU7tW41Qb3YlD_zs"
+    },
+    "awayTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 4,
+    "awayScore": 10,
+    "kickOff": "2026-05-10T13:30:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "Footscray Rugby Club, 241 Footscray Rd, London SE9 2EL",
+    "notes": "",
+    "goalScorers": "Aaron S (3), Kev L (2), Jonathan S, Jasper M (3), Adam H"
+  },
+  {
+    "id": "reckuOE8aUSeFE3oW",
+    "match": "Titans Turner vs. Birmingham Blaze",
+    "homeTeam": {
+      "id": "recUNLEWqvgh2u11R",
+      "name": "Titans Turner",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recsFChDDgpTNCSSs",
+      "name": "Birmingham Blaze",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/1YLcIIthyWL3pW4SiUgzyg/t1KmWHx_z9jmmfX1lvKNAY5HuoczHFW8fYn37S9t1cebi5AM5pH33fF_L57nOoC-vKkm7NzI0thRMe6iWrYayoshETz5tCnmx5xLTM-0uNzZZh2eUrPFnquN712eTVR1O5zdKkZeqC_unyCIiy1prg/gC-AGYb7fNlNWRObT0tt4fH7SVxkhYGv3qtUxtgfyhI"
+    },
+    "homeScore": 3,
+    "awayScore": 0,
+    "kickOff": "2026-02-21T00:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recmIgINIGkcLvKbu",
+    "match": "Titans Wheeler vs. Titans Turner",
+    "homeTeam": {
+      "id": "recB5l1ww2BHQmZav",
+      "name": "Titans Wheeler",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recUNLEWqvgh2u11R",
+      "name": "Titans Turner",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 2,
+    "awayScore": 0,
+    "kickOff": "2025-09-19T23:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recmLsqsOKBma6pkP",
+    "match": "Titans LGBT Hero vs. Stonewall Unity Dev",
+    "homeTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recTl5fNWpb6EfmFT",
+      "name": "Stonewall Unity Dev",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/o63vbyE_wHXRBF9XWhJ_DQ/195OAxkXv3iPCjVNbW8OntQg9cXtZwhnyjEWq34KM6InLvQT12r8KQmMJSK4Nedndjjg3VyLOm0oH9a2QnjUuFKZoP9jNO-snrPqbaMXwnmiNp2AV2PSf2rld7nT2t0s0BmUxEA_ZGicGTlCzSDPzw/iuKyrWSzkH4ajwcyic2X6KMCvHuvWQlEi8IE6_d6Y9g"
+    },
+    "homeScore": 3,
+    "awayScore": 1,
+    "kickOff": "2025-11-23T14:00:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "",
+    "goalScorers": "David WH (2), Tom F"
+  },
+  {
+    "id": "recnRchUcV1CDPbiC",
+    "match": "Charlton Invicta vs. Titans Development",
+    "homeTeam": {
+      "id": "reckBgq8Gh7bQJSnt",
+      "name": "Charlton Invicta",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p3aDxz6qE7wiAMDEHUiy5w/fxwdj6ywGsZ7DZY0fmSsxNVEmPc1B2sOZ6JlUee0KD1d11Z6Ae65UnKepMPcV2lzD_R4iIoZvv11Ki3Qh1-IBPbsasrbJkFeM7fBHv7aIWRKKQgJ48Bq3ndGVXOJlzC12ILs6_8UprfMxapHeYAgMA/1HNDiTblR2_loaJtsuUbzA6henlHQjDApuUo99YLuKQ"
+    },
+    "awayTeam": {
+      "id": "rec6DFEVa5Gp8iL2v",
+      "name": "Titans Development",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 4,
+    "awayScore": 3,
+    "kickOff": "2026-05-10T13:30:00.000Z",
+    "league": "GFSN Shield",
+    "competition": "GFSN Shield",
+    "matchType": [
+      "Shield",
+      "Final"
+    ],
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "Footscray Rugby Club, 241 Footscray Rd, London SE9 2EL",
+    "notes": "",
+    "goalScorers": "Chris B (2), OG"
+  },
+  {
+    "id": "recnwPBVSm2DW2Z0T",
+    "match": "Charlton Addicks vs. Titans Two Brewers",
+    "homeTeam": {
+      "id": "recwtNptegP2Z2luB",
+      "name": "Charlton Addicks",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/iAOnkHbDBon3GecqvajU0Q/-dcIk4DeGyL_4xSFCDrWN3Z-bPWQzrU63prAZwe_zbM_Iuy2ArW-tFNDAAVYhVAPnPILtHYFCSNlJvS4Pqh4VYNmG4jhPkNjvWGS_HiMLj-odx7kOLxQI2Kp87F0v2khgnfOIXD-o02mSjpNyW4YSA/VXvGNEgE1OwxtIQvhDadhzEOyN_fLvFJRF0jiXj59mU"
+    },
+    "awayTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 1,
+    "awayScore": 5,
+    "kickOff": "2026-04-19T13:00:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "Footscray Road, New Eltham, SE9 2EL",
+    "notes": "",
+    "goalScorers": "Aaron S (2), Tom F (2), Ollie JP"
+  },
+  {
+    "id": "recoXfr4PTyRUXlS8",
+    "match": "Titans Two Brewers vs. Charlton Addicks",
+    "homeTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recwtNptegP2Z2luB",
+      "name": "Charlton Addicks",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/iAOnkHbDBon3GecqvajU0Q/-dcIk4DeGyL_4xSFCDrWN3Z-bPWQzrU63prAZwe_zbM_Iuy2ArW-tFNDAAVYhVAPnPILtHYFCSNlJvS4Pqh4VYNmG4jhPkNjvWGS_HiMLj-odx7kOLxQI2Kp87F0v2khgnfOIXD-o02mSjpNyW4YSA/VXvGNEgE1OwxtIQvhDadhzEOyN_fLvFJRF0jiXj59mU"
+    },
+    "homeScore": 2,
+    "awayScore": 1,
+    "kickOff": "2026-01-25T13:00:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "",
+    "goalScorers": "Jasper M, Johnny P"
+  },
+  {
+    "id": "recqaYoLumLwsCSTN",
+    "match": "Titans Two Brewers vs. Soho FC",
+    "homeTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recqAw1eSDgGLdx5E",
+      "name": "Soho FC",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/DsIyGddFuAwjnhvRSNAhGw/fVD5iwbX344KT1a-ZD8BoRs409pDsE9qVZiQDQWvG3Jzfkups-tNv6oqUC6ChiF-i9dReyPjO87C9IazCO0ruu-qJQbBzOf262xRDmwdIBpa8HU7tPuLvzhLkoTCGlS9aEDuX3rENF1neNXdm3Rs7Q/av8Kxygv16Dm-ahAOpa6KppBNJtocDKOqNlAcKJc2fg"
+    },
+    "homeScore": 3,
+    "awayScore": 0,
+    "kickOff": "2026-03-01T14:00:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "Originally scheduled for Sunday 10 May",
+    "goalScorers": "Aaron S (2), James C"
+  },
+  {
+    "id": "recqqUVmMlSEKNBcs",
+    "match": "Titans LGBT Hero vs. Stokey FC",
+    "homeTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recoojeW7jy77EK9P",
+      "name": "Stokey FC",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/ed0Sxz30qW0ghF7EyBitOw/tEpSfc6zXOQiDDlyvd3Ydv8Ohn5KTeexFGNq0TlWgyVVKoQIyPOgyAx_f8IfhB_VLVrbZctHabLX9XXzjD_yXpjz2eP8IjZKquKWt8UJHcDOEgzftvN7U93W3JORryrlyPCDpQ9dRVMcPwwLXKPt3w/Ss81V7vc1EnpgMfSxAocaw_dhL-PDJ-BSJDSAqWVYcU"
+    },
+    "homeScore": 0,
+    "awayScore": 2,
+    "kickOff": "2026-02-01T13:30:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "Kings House Sports Ground, W4 2SH",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recrn2WdvS8dvKohX",
+    "match": "Titans Wheeler vs. Nottingham Lions",
+    "homeTeam": {
+      "id": "recB5l1ww2BHQmZav",
+      "name": "Titans Wheeler",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recw70kS3zTp5gSCX",
+      "name": "Nottingham Lions",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/ata05vCclQpqvQg9a51WWw/aUuSt7IuBlUXWm69jJyj19erCyzz-UGVqEjB1Ab4quyIocy2sDOxII_mQzq7yuVDnUbbCZLU3Aq7IxvwCbQu1dDcwRTv2xK8t5R7A3cuH5OSku54bhlOKpfbAQR5XDN50ixxYXHD1urvJOGRc2uPcg/XF4Skd4YqSnCiK_tYarZ3IOKFSne7gmXSBPiTqhsiF8"
+    },
+    "homeScore": 1,
+    "awayScore": 8,
+    "kickOff": "2026-04-24T23:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recrqU411WGICPxAZ",
+    "match": "Titans Turner vs. Trowbridge Tigers",
+    "homeTeam": {
+      "id": "recUNLEWqvgh2u11R",
+      "name": "Titans Turner",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "awayTeam": {
+      "id": "recbwxtgyjyjqqiqI",
+      "name": "Trowbridge Tigers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/bv1wVruBeJTg-viAv-6Gpg/LooqOHTYhkxwlprCDHPBXQGSgCKkf_HtfsDpm-6xDEU7_CK1MIsLQaKX1dg1oxc2WJO8um-ophKHps6w03RkG9ZLn0EETjOxh0cIca5Ks0J0r4hZbidL6cXOyjMy47N5Kx5cJRmSUbEqQAP-63pHdQ/KVBKLQ82CCFDRL15_6m-jzi6QYEzyJDUrjCerdmUpdw"
+    },
+    "homeScore": 2,
+    "awayScore": 3,
+    "kickOff": "2025-10-18T23:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recuBdk0PCgglbtN2",
+    "match": "Charlton Valiants vs. Titans Two Brewers",
+    "homeTeam": {
+      "id": "reccUHCrAoTUu9m0Z",
+      "name": "Charlton Valiants",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/RLpai46ZQsIEDPkdZkbFww/UGi_T-tD_lDbb91kiHTGzTHtWVisC_ye_ITWM9NVX1we435cVOJvu-8kvrQlBIY7IHTfRB9Lu7QBDEceqaQsJ3OI-njsTcQ1wzpUeyf-skIS19wSQ1h0LaPF-cdXkOlHQneOPGAwKWJ-CWGlUASSZw/REM9RyCdRJSXbsGuauZ3oztePfQDU7tW41Qb3YlD_zs"
+    },
+    "awayTeam": {
+      "id": "recLzboIJQYY76Fuj",
+      "name": "Titans Two Brewers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 1,
+    "awayScore": 2,
+    "kickOff": "2026-03-14T16:00:00.000Z",
+    "league": "LUL Division 1",
+    "competition": "LUL Division 1",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "Memorial Recreation Ground, E15 3AH",
+    "notes": "Titans cards: David E [S6], Lewis G [YC], Johnny P [YC]",
+    "goalScorers": "Caolan C, Aidan B"
+  },
+  {
+    "id": "recvd8ZD8OVVCE1bH",
+    "match": "London Freedom vs. Titans LGBT Hero",
+    "homeTeam": {
+      "id": "reclSto6PjPpy8lDW",
+      "name": "London Freedom",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/Q8ytlCpXWlUFQ_TXssYDPg/fRRJE2A2gAPd9wYaF2tkJ86ct_uYKnbvzVPB9V6_aWDoUzFGnuJCRY2BtwIvs8GeWYwDvoXH7413E5ziQ37rQFHbMWo7nGa_ATQQdHVczQ69ZzZ21GFpbO4xH3ATMLJ0hqVuVy0-TCHazaSbGUcPQQ/6Bil7FOzAovCmVK-PpUuQ-_NMHcXQJdLXrwb_kuBvz0"
+    },
+    "awayTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 3,
+    "awayScore": 1,
+    "kickOff": "2026-01-18T14:00:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "Memorial Recreation Ground, E15 3AH",
+    "notes": "",
+    "goalScorers": "Michael F"
+  },
+  {
+    "id": "recweZZiClvRV5JXc",
+    "match": "East End Phoenix vs. Titans Wheeler",
+    "homeTeam": {
+      "id": "recBS8GVUhsQoN9rD",
+      "name": "East End Phoenix",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/KzT3BNU8s2t9S8e7ZJpdRA/OmYLOOgFnHa6wyPuUrebj9L0wMgHbfY1W9DAhxY0BZBQwAtL4s0nG5eY6cL-X3YGo5CJwjAAocnrvuBnIUX7Ek88NO1B8CN4JUhDXdp7VVaB9KmtqFEjHPRAOthzR_GudjQXeGjFtgcKPJAjpQWLUA/biliD87c5NgFlxWagx2M_nIl6DF_padL2BQLDsIbx6k"
+    },
+    "awayTeam": {
+      "id": "recB5l1ww2BHQmZav",
+      "name": "Titans Wheeler",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 1,
+    "awayScore": 0,
+    "kickOff": "2025-10-17T23:00:00.000Z",
+    "league": "GFSN Division 2",
+    "competition": "GFSN Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "",
+    "notes": "",
+    "goalScorers": ""
+  },
+  {
+    "id": "recx1wVT2RWdgwfBY",
+    "match": "Barnes Stormers vs. Titans LGBT Hero",
+    "homeTeam": {
+      "id": "recUCpT4zUCiyr7NA",
+      "name": "Barnes Stormers",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/_MVQTOWPImCv_1L6BaBpbA/xUXFsFjTF52nDYw2HjNzpgQrpLuu_JRAxPNO4SoNHP-zBK25WfWc-HLKEmaYRp7H9qbnfE4oZL6O0qKoOCWGpUlyp9-JBOFjCH8V59X1o3B38WIsP7dboiZoRQzz5Ukgno3jrRg5NraRYXWrl3Fs9Q/3fNnyQDu19Ess_n2J774lIDPBTQrz6cJhtU2oi4no9w"
+    },
+    "awayTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 2,
+    "awayScore": 4,
+    "kickOff": "2026-01-25T13:30:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Win",
+    "location": "Barnes Common, Common Rd, SW13 0JF",
+    "notes": "",
+    "goalScorers": "Jordan E, James A, Chris B (2)"
+  },
+  {
+    "id": "recxS0KVlxVLfbsfA",
+    "match": "Stonewall Unity Dev vs. Titans LGBT Hero",
+    "homeTeam": {
+      "id": "recTl5fNWpb6EfmFT",
+      "name": "Stonewall Unity Dev",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/o63vbyE_wHXRBF9XWhJ_DQ/195OAxkXv3iPCjVNbW8OntQg9cXtZwhnyjEWq34KM6InLvQT12r8KQmMJSK4Nedndjjg3VyLOm0oH9a2QnjUuFKZoP9jNO-snrPqbaMXwnmiNp2AV2PSf2rld7nT2t0s0BmUxEA_ZGicGTlCzSDPzw/iuKyrWSzkH4ajwcyic2X6KMCvHuvWQlEi8IE6_d6Y9g"
+    },
+    "awayTeam": {
+      "id": "recx4kTYjmU9tp5gv",
+      "name": "Titans LGBT Hero",
+      "logoUrl": "https://v5.airtableusercontent.com/v3/u/53/53/1778846400000/p00m2n_oOWmWj2tgc7myYQ/ym7uATgCl1nkStC8S6dvj9NQytV6XS0GFdGGifyu3Y0ofim47EltDVRqKEcPtJtYSaGLU4kTOFvc-3Vg666vO6qXClqllDGwK18Jjytsmuu9iikpAD52H4qHYXRPq7qhsZhre6t7jsR2So7zk_R8hw/LG4cL5MgK8EshhnFgjnEWztsEP7ZhW2dz9BefQAy15Y"
+    },
+    "homeScore": 2,
+    "awayScore": 0,
+    "kickOff": "2026-03-15T14:00:00.000Z",
+    "league": "LUL Division 2",
+    "competition": "LUL Division 2",
+    "matchType": "",
+    "season": "",
+    "status": "",
+    "result": "Loss",
+    "location": "London Marathon Community Track, Queen Elizabeth Olympic Park, London E20 2ST",
+    "notes": "Titans cards: Adam B [YC] | Originally scheduled for Sunday 22 March, moved to 08 Mar, then clubs agreed new date of 15 March",
+    "goalScorers": ""
+  }
+]

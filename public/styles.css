@@ -725,6 +725,10 @@ h1 {
   box-shadow: 0 0 15px rgba(255, 209, 2, 0.08), 0 14px 30px rgba(0, 0, 0, 0.24);
 }
 
+.fixtureCard.isExpanded .fixtureToggle::after {
+  transform: rotate(180deg);
+}
+
 .fixtureToggle {
   position: relative;
   z-index: 1;
@@ -852,6 +856,36 @@ h1 {
   color: var(--text);
   font-size: 0.78rem;
   font-weight: 700;
+}
+
+.fixtureInlineDetails {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fixtureInlinePoster {
+  padding: 1rem 1rem 0.9rem;
+}
+
+.fixtureInlineBody {
+  padding: 0.85rem 1rem 1rem;
+}
+
+.fixtureInlinePoster .modalTeams {
+  margin-bottom: 0.85rem;
+}
+
+.fixtureInlinePoster .modalTeam {
+  font-size: 1.2rem;
+}
+
+.fixtureInlinePoster .modalScore {
+  min-width: 4.15rem;
+  min-height: 3.1rem;
+  font-size: 1.35rem;
+}
+
+.fixtureInlinePoster .modalMeta {
+  margin-top: 0.25rem;
 }
 
 .emptyState {
@@ -1662,6 +1696,33 @@ h1 {
 
   .heroLeague {
     text-align: left;
+  }
+
+  .fixtureInlinePoster {
+    padding: 0.9rem 0.85rem 0.8rem;
+  }
+
+  .fixtureInlineBody {
+    padding: 0.75rem 0.85rem 0.9rem;
+  }
+
+  .fixtureInlinePoster .modalTeam {
+    min-height: auto;
+    padding: 0.25rem;
+    font-size: 0.96rem;
+  }
+
+  .fixtureInlinePoster .modalScore {
+    min-width: 3.7rem;
+    min-height: 2.75rem;
+    font-size: 1.05rem;
+  }
+
+  .fixtureInlinePoster .modalWatermark {
+    width: 6.5rem;
+    height: 6.5rem;
+    padding: 0.45rem;
+    opacity: 0.13;
   }
 
   .heroTeams,
