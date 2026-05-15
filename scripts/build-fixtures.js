@@ -1,7 +1,8 @@
 const { mkdir, writeFile } = require("node:fs/promises");
+const { existsSync } = require("node:fs");
 const path = require("node:path");
 
-if (typeof process.loadEnvFile === "function") {
+if (typeof process.loadEnvFile === "function" && existsSync(path.join(process.cwd(), ".env"))) {
   process.loadEnvFile();
 }
 
